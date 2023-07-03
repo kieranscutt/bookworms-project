@@ -1,13 +1,12 @@
-const db = require('../database/connect');
+const db = require("../database/connect");
 
 class User {
-
-    constructor({ user_id, name, email, password}) {
-        this.id = user_id;
-        this.name = name;
-        this.email = email;
-        this.password = password;
-    }
+  constructor({ user_id, name, email, password }) {
+    this.id = user_id;
+    this.name = name;
+    this.email = email;
+    this.password = password;
+  }
 
     static async getOneById(id) {
         const response = await db.query("SELECT * FROM users WHERE user_id = $1", [id]);

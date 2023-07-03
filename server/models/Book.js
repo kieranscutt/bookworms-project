@@ -47,12 +47,12 @@ class Book {
     this.user_id = user_id;
     this.borrow_date = borrow_date;
     this.return_date = return_date;
-
+    console.log("hello");
     const response = await db.query(
-      "UPDATE book SET user_id = $1, borrow_date = $2, return_date = $3 WHERE book_id = $4;",
-      [user_id, borrow_date, return_date, this.book_id]
+      "UPDATE book SET user_id = $1, borrow_date = $2, return_date = $3 WHERE LOWER(title) = $4;",
+      [user_id, borrow_date, return_date, this.title]
     );
-
+    console.log("hello");
     if (response.rows.length != 1) {
       throw new Error("Unable to update borrowing information. ");
     }
