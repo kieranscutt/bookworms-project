@@ -78,7 +78,7 @@ body {
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
 }
 
-input {
+#login-input {
   width: 538px;
   height: 63px;
   background-color: #eee9da;
@@ -131,7 +131,6 @@ input[type="submit"] {
 }
 nav {
   display: flex;
-  /* justify-content: space-between; */
   align-items: center;
   padding: 30px;
   height: 94px;
@@ -171,6 +170,7 @@ nav {
   display: flex;
   background-color: #eee9da;
   border-radius: 10px;
+  border: none;
 }
 #searchbar {
   height: 100%;
