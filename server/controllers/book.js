@@ -13,7 +13,6 @@ async function show(req, res) {
   try {
     const title = req.params.name.toLowerCase();
     const book = await Book.getOneByTitle(title);
-    console.log(book);
     res.json(book);
   } catch (err) {
     res.status(404).json({ error: err.message });
@@ -22,7 +21,7 @@ async function show(req, res) {
 
 async function update(req, res) {
   try {
-    const title = req.params.title;
+    const title = req.params.name.toLowerCase();
     const data = req.body;
     const book = await Book.getOneByTitle(title);
     const result = await book.update(data);
