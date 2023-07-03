@@ -37,15 +37,6 @@ async function login (req, res) {
     
 }
 
-async function show(req, res) {
-    try {
-        const name = req.params.username
-        const user = await User.getOneByUsername(name);
-        res.status(200).send(user);
-    } catch (err) {
-        res.status(404).send({ "error": err.message })
-    }
-}
 
 async function destroy(req, res) {
     try {
@@ -71,4 +62,4 @@ async function update(req, res) {
 }
 
 
-module.exports = {register, login, destroy, show, update}
+module.exports = {register, login, destroy, update}
