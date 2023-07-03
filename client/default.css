@@ -69,8 +69,8 @@ body {
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
 }
 
-#login-btn:hover{
-  scale:0.95;
+#login-btn:hover {
+  scale: 0.95;
 }
 
 #link-to-register {
@@ -81,4 +81,76 @@ body {
   list-style: none;
   text-decoration: none;
   top: 110px;
+}
+
+nav {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  padding: 30px;
+  height: 94px;
+  background-color: #6096b4;
+}
+
+#hamburger {
+  font-size: 62px;
+  cursor: pointer;
+}
+
+#hamburger:hover {
+  transform: scale(105%);
+}
+
+#user-icon {
+  font-size: 52px;
+  cursor: pointer;
+  margin-left: 29px;
+}
+
+#user-icon:hover {
+  transform: scale(105%);
+}
+
+#logo {
+  font-size: 48px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-left: 394px;
+}
+
+#search-form {
+  width: 400px;
+  height: 60px;
+  margin-left: 214px;
+  display: flex;
+  background-color: #eee9da;
+  border-radius: 10px;
+}
+#searchbar {
+  height: 100%;
+  background: #eee9da;
+  color: black;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+#search-button {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border: none;
+  margin-left: 10px;
+  background-color: #eee9da;
+  display: flex;
+  cursor: pointer;
+  font-size: 43px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+#search-button i:hover {
+  transform: scale(105%);
 }
