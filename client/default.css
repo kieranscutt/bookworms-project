@@ -31,13 +31,51 @@ body {
   border: 3px solid #6096b4;
   border-radius: 20px;
   gap: 29px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
 }
 
-.loginTitle {
-  position: inherit;
+#register-form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 663px;
+  height: 630px;
+  background-color: #bdcdd6;
+  border: 3px solid #6096b4;
+  border-radius: 20px;
+  gap: 29px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
+}
+
+.loginTitle,
+.registerTitle {
   font-size: 40;
   font-weight: bold;
-  top: 34px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.registerTitle {
+  margin-top: 20px;
+}
+
+#login-input {
+  position: relative;
+  width: 538px;
+  height: 63px;
+  background-color: #eee9da;
+  border: 3px solid #6096b4;
+  border-radius: 8px;
+  font-size: 32px;
+  font-weight: lighter;
+  top: 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
 }
 
 #login-input {
@@ -48,11 +86,213 @@ body {
   border-radius: 8px;
   font-size: 32px;
   font-weight: lighter;
+  top: 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
 }
 
-#login-btn {
+input[type="submit"] {
+  position: relative;
   width: 538px;
   height: 63px;
   background-color: #6096b4;
   border: none;
+  font-size: 32px;
+  font-weight: bold;
+  color: #eee9da;
+  border-radius: 8px;
+  top: 60px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
+}
+
+#login-btn:hover {
+  scale: 0.95;
+}
+
+#register-btn {
+  top: 20px;
+}
+
+#link-to-register {
+  position: relative;
+  height: 39px;
+  width: 494px;
+  font-size: 32px;
+  list-style: none;
+  text-decoration: none;
+  top: 110px;
+}
+
+#link-to-login {
+  position: relative;
+  height: 39px;
+  width: 494px;
+  font-size: 32px;
+  top: 110px;
+}
+nav {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  height: 94px;
+  background-color: #6096b4;
+}
+
+#hamburger {
+  font-size: 62px;
+  cursor: pointer;
+}
+
+#hamburger:hover {
+  transform: scale(105%);
+}
+
+#user-icon {
+  font-size: 52px;
+  cursor: pointer;
+  margin-left: 29px;
+}
+
+#user-icon:hover {
+  transform: scale(105%);
+}
+
+#logo {
+  font-size: 48px;
+  font-weight: 400;
+  cursor: pointer;
+  margin-left: 394px;
+}
+
+#search-form {
+  width: 400px;
+  height: 60px;
+  margin-left: 214px;
+  display: flex;
+  background-color: #eee9da;
+  border-radius: 10px;
+  border: none;
+}
+#searchbar {
+  height: 100%;
+  background: #eee9da;
+  color: black;
+  font-family: "Rubik", sans-serif;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+#search-button {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border: none;
+  margin-left: 10px;
+  background-color: #eee9da;
+  display: flex;
+  cursor: pointer;
+  font-size: 43px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+#search-button i:hover {
+  transform: scale(105%);
+}
+
+.trendingBooks {
+  width: 100%;
+  height: 377px;
+  margin-top: 59px;
+  display: flex;
+  flex-direction: column;
+}
+
+.trendingBooks img {
+  cursor: pointer;
+}
+
+.trendingBooks img:hover {
+  transform: scale(105%);
+}
+
+.trendingBooksTitle {
+  font-size: 48px;
+  font-weight: 400;
+  margin-left: 105px;
+  margin-bottom: 49px;
+}
+
+.trendingGrid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(5, 156px);
+  gap: 109px;
+  justify-content: center;
+  margin: 0;
+}
+
+.browseGenres {
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  /* flex-direction: row; */
+}
+
+.browseGenresTitle {
+  font-size: 48px;
+  font-weight: 400;
+  margin-left: 105px;
+}
+
+#dropdown-button {
+  font-size: 40px;
+  margin-top: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+  height: 20px;
+}
+
+#dropdown-button:hover {
+  transform: scale(105%);
+}
+
+li {
+  list-style: none;
+}
+
+li a {
+  text-decoration: none;
+  color: black;
+  font-size: 1rem;
+}
+
+a:hover {
+  text-decoration: underline;
+  transform: scale(105%);
+}
+
+.genreMenu {
+  margin-top: 15px;
+  margin-left: 20px;
+  height: 0;
+  background-color: #6096b4;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  z-index: 5;
+  border-radius: 8px;
+}
+
+.genreMenu.open {
+  height: 215px;
+  width: 300px;
+  border: solid #f8f3d4 2px;
+}
+
+.genreMenu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
