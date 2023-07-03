@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 
-
 const logRoutes = require("./middleware/logger");
 const bookRouter = require("./routers/book");
 const userRouter = require("./routers/user");
@@ -23,4 +22,3 @@ app.use("/books", bookRouter);
 app.use("/users", userRouter);
 
 module.exports = app;
-
