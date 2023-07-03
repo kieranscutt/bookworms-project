@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="default.css" />
+    <script
+      src="https://kit.fontawesome.com/e0f29e24ce.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="assets/index.js"></script>
+    <title>Home Page</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <i class="fa-solid fa-bars"></i>
+      <i class="fa-regular fa-user"></i>
+      <h1>Bookworms</h1>
+      <form id="search-form">
+        <input type="text" id="searchbar" placeholder="Search Books" />
+        <button type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </nav>
+    <section class="trendingBooks">
+      <h1 class="trendingBooksTitle">Trending Books</h1>
+      <section class="trendingGrid">
+        <img src="images/harrypotter.png" alt="harrypotter" id="trending1" />
+        <button id="trending-button1">Borrow</button>
+        <img src="images/lunarstorm.png" alt="lunarstorm" id="trending2" />
+        <button id="trending-button2">Borrow</button>
+        <img
+          src="images/thehypocriteworld.png"
+          alt="thehypocriteworld"
+          id="trending3"
+        />
+        <button id="trending-button3">Borrow</button>
+        <img src="images/normalpeople.png" alt="normalpeople" id="trending4" />
+        <button id="trending-button4">Borrow</button>
+        <img
+          src="images/thegreatgatsby.png"
+          alt="thegreatgatsby"
+          id="trending5"
+        />
+        <button id="trending-button5">Borrow</button>
+      </section>
+    </section>
+    <section class="browseGenres">
+      <h1 class="browseGenresTitle">Browse Genres</h1>
+      <i id="dropdown-button" class="fa-solid fa-caret-down"></i>
+      <div class="genreMenu" id="genre-menu">
+        <li><a id="thriller" href="#">Thriller</a></li>
+        <hr />
+        <li><a id="detective" href="#">Classic Detective</a></li>
+        <hr />
+        <li><a id="romance" href="#">Romance</a></li>
+        <hr />
+        <li><a id="kids" href="#">Kids</a></li>
+        <hr />
+        <li><a id="action" href="#">Action/Adventure</a></li>
+      </div>
+    </section>
+  </body>
+</html>
