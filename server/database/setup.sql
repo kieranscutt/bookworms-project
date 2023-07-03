@@ -59,7 +59,7 @@ VALUES
     ("Goodnight Moon",  "Margaret Wise Brown", "Kids",  "Bedtime story with soothing rhythm and beautiful illustrations."),
     ("The Little Prince", "Antoine de Saint-Exupéry", "Kids", "A philosophical tale about friendship and imagination."),
     ("The BFG", "Roald Dahl", "Kids", "Adventure with a friendly giant who captures dreams."),
-    ("The Da Vinci Code", "Dan Brown", "Action Adventure", "A thrilling quest for a hidden secret."),
+    ("The Hobbit", "J.R.R. Tolkien", "Action/Adventure", "The Hobbit", "A hobbit who embarks on a journey to reclaim a treasure guarded by a dragon."),
     ("Jurassic Park" , "Michael Crichton", "Action Adventure", "Dinosaurs unleashed in a theme park."),
     ("The Bourne Identity", "Robert Ludlum", "Action Adventure", "An amnesiac agent on the run."),
     ("Treasure Island", "Robert Louis Stevenson", "Action Adventure", "Pirates, treasure, and high-sea adventures."),
@@ -84,5 +84,5 @@ CREATE TABLE token (
     user_id INT NOT NULL,
     token CHAR(36) UNIQUE NOT NULL,
     PRIMARY KEY (token_id),
-    FOREIGN KEY (user_id) REFERENCES user_account(user_id)
+    FOREIGN KEY (user_id) 
 );
