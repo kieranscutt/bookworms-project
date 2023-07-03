@@ -14,7 +14,7 @@ CREATE TABLE book (
     borrow_date DATE,
     return_date DATE,
     PRIMARY KEY (book_id),
-    FOREIGN KEY (user_id)
+    FOREIGN KEY (user_id) REFERENCES user(user_id)
 );
 
 INSERT INTO book (title, author, genre, short_description)
@@ -84,5 +84,5 @@ CREATE TABLE token (
     user_id INT NOT NULL,
     token CHAR(36) UNIQUE NOT NULL,
     PRIMARY KEY (token_id),
-    FOREIGN KEY (user_id) 
+    FOREIGN KEY (user_id) REFERENCES user(user_id)
 );
