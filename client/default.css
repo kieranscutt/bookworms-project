@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Rubik", sans-serif;
+  height: 100%;
+  width: 100%;
+  background-color: #eee9da;
+}
+
+#login-form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 663px;
+  height: 446px;
+  background-color: #bdcdd6;
+  border: 3px solid #6096b4;
+  border-radius: 20px;
+  gap: 29px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
+}
+
+.loginTitle {
+  position: inherit;
+  font-size: 40;
+  font-weight: bold;
+  top: 34px;
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+#login-input {
+  position: relative;
+  width: 538px;
+  height: 63px;
+  background-color: #eee9da;
+  border: 3px solid #6096b4;
+  border-radius: 8px;
+  font-size: 32px;
+  font-weight: lighter;
+  top: 60px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+#login-btn {
+  position: relative;
+  width: 538px;
+  height: 63px;
+  background-color: #6096b4;
+  border: none;
+  font-size: 32px;
+  font-weight: bold;
+  color: #eee9da;
+  border-radius: 8px;
+  top: 60px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
+}
+
+#login-btn:hover{
+  scale:0.95;
+}
+
+#link-to-register {
+  position: relative;
+  height: 39px;
+  width: 494px;
+  font-size: 32px;
+  list-style: none;
+  text-decoration: none;
+  top: 110px;
+}
