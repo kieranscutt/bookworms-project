@@ -25,12 +25,3 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     alert(data.error);
   }
 });
-
-document.querySelector("#link-to-register").addEventListener("click", (e) => {
-  e.preventDefault();
-  try {
-    window.location.assign("register.html");
-  } catch (error) {
-    throw new Error(error);
-  }
-});
