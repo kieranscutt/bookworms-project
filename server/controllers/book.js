@@ -11,8 +11,8 @@ async function index (req, res) {
 
 async function show (req, res) {
     try {
-           const name = req.params.title
-           const book = await Book.getOneByName(name);
+           const title = req.params.title.toLowerCase()
+           const book = await Book.getOneByTitle(title);
            res.json(book)
     } catch (err) {
         res.status(404).json({error: err.message})
@@ -21,9 +21,9 @@ async function show (req, res) {
 
 async function update(req, res) {
     try {
-       const name = req.params.title.toLowerCase()
+       const title = req.params.title.toLowerCase()
        const data = req.body
-       const book = await Book.getOneByName(name)
+       const book = await Book.getOneByTitle(title)
        const result = await book.update(data)
          res.status(200).json(result)
     } catch(err) {
