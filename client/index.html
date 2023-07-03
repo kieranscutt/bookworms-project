@@ -13,12 +13,12 @@
   </head>
   <body>
     <nav class="navbar">
-      <i class="fa-solid fa-bars"></i>
-      <i class="fa-regular fa-user"></i>
-      <h1>Bookworms</h1>
+      <i id="hamburger" class="fa-solid fa-bars"></i>
+      <i id="user-icon" class="fa-regular fa-user"></i>
+      <h1 id="logo">Bookworms</h1>
       <form id="search-form">
         <input type="text" id="searchbar" placeholder="Search Books" />
-        <button type="submit">
+        <button type="submit" id="search-button">
           <i class="fa-solid fa-magnifying-glass"></i>
         </button>
       </form>
@@ -27,29 +27,24 @@
       <h1 class="trendingBooksTitle">Trending Books</h1>
       <section class="trendingGrid">
         <img src="images/harrypotter.png" alt="harrypotter" id="trending1" />
-        <button id="trending-button1">Borrow</button>
         <img src="images/lunarstorm.png" alt="lunarstorm" id="trending2" />
-        <button id="trending-button2">Borrow</button>
         <img
           src="images/thehypocriteworld.png"
           alt="thehypocriteworld"
           id="trending3"
         />
-        <button id="trending-button3">Borrow</button>
         <img src="images/normalpeople.png" alt="normalpeople" id="trending4" />
-        <button id="trending-button4">Borrow</button>
         <img
           src="images/thegreatgatsby.png"
           alt="thegreatgatsby"
           id="trending5"
         />
-        <button id="trending-button5">Borrow</button>
       </section>
     </section>
     <section class="browseGenres">
       <h1 class="browseGenresTitle">Browse Genres</h1>
       <i id="dropdown-button" class="fa-solid fa-caret-down"></i>
-      <div class="genreMenu" id="genre-menu">
+      <div class="genreMenu open" id="genre-menu">
         <li><a id="thriller" href="#">Thriller</a></li>
         <hr />
         <li><a id="detective" href="#">Classic Detective</a></li>
