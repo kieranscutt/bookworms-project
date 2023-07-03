@@ -34,12 +34,35 @@ body {
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
 }
 
-.loginTitle {
-  position: inherit;
+#register-form {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: 663px;
+  height: 630px;
+  background-color: #bdcdd6;
+  border: 3px solid #6096b4;
+  border-radius: 20px;
+  gap: 29px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
+}
+
+.loginTitle,
+.registerTitle {
   font-size: 40;
   font-weight: bold;
-  top: 34px;
   text-shadow: 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.registerTitle {
+  margin-top: 20px;
 }
 
 #login-input {
@@ -51,11 +74,23 @@ body {
   border-radius: 8px;
   font-size: 32px;
   font-weight: lighter;
-  top: 60px;
+  top: 20px;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
 }
 
-#login-btn {
+input {
+  width: 538px;
+  height: 63px;
+  background-color: #eee9da;
+  border: 3px solid #6096b4;
+  border-radius: 8px;
+  font-size: 32px;
+  font-weight: lighter;
+  top: 20px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
+}
+
+input[type="submit"] {
   position: relative;
   width: 538px;
   height: 63px;
@@ -73,6 +108,10 @@ body {
   scale: 0.95;
 }
 
+#register-btn {
+  top: 20px;
+}
+
 #link-to-register {
   position: relative;
   height: 39px;
@@ -83,6 +122,13 @@ body {
   top: 110px;
 }
 
+#link-to-login {
+  position: relative;
+  height: 39px;
+  width: 494px;
+  font-size: 32px;
+  top: 110px;
+}
 nav {
   display: flex;
   /* justify-content: space-between; */
