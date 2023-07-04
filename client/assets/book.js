@@ -5,7 +5,7 @@ let bookGenre = document.querySelector("#genre");
 let bookDescription = document.querySelector("#description");
 
 async function displayBook(book) {
-  const response = await fetch(`http://localhost:3001/books/${book}`);
+  const response = await fetch(`http://localhost:3000/books/${book}`);
   const data = await response.json();
 
   const titleElement = document.querySelector("#title");
@@ -39,7 +39,7 @@ async function formSubmission(event) {
   const searchBook = searchInput.value.trim();
 
   if (searchBook !== "") {
-    await fetch(`http://localhost:3001/books/`)
+    await fetch(`http://localhost:3000/books/`)
       .then((response) => response.json())
       .then((data) => {
         const foundBook = data.find((book) =>
@@ -48,6 +48,7 @@ async function formSubmission(event) {
 
         if (foundBook) {
           displayBook(foundBook);
+          clearBookDetails();
         } else {
           clearBookDetails();
         }
