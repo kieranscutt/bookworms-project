@@ -327,45 +327,49 @@ a:hover {
   justify-content: center;
 }
 
+.hidden {
+  display: none;
+}
+
 /* USERS */
 
 .profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .profile__logo {
-    background-color: #6096b4;
-    margin-top: 12px;
-    padding: 12px;
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+  background-color: #6096b4;
+  margin-top: 12px;
+  padding: 12px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
 }
 
 .profile__letter {
-    font-size: 64px;
+  font-size: 64px;
 }
 
-
-.profile__name{
-    display: flex;
+.profile__name {
+  display: flex;
 }
 
 .name {
-    margin: 8px
+  margin: 8px;
 }
 
 .name__input {
-    margin-top: 8px;
+  margin-top: 8px;
 }
 
-.currentGrid, .previousGrid {
-    display: grid;
+.currentGrid,
+.previousGrid {
+  display: grid;
   width: 100%;
   grid-template-columns: repeat(5, 156px);
   gap: 109px;
@@ -373,28 +377,25 @@ a:hover {
   margin: 0;
 }
 
-.previous, .reading {
-    margin-bottom: 12px;
-    transition: all 300ms ease;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.596);
+.previous,
+.reading {
+  margin-bottom: 12px;
+  transition: all 300ms ease;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.596);
 }
 
-
-
-.previous:hover, .reading:hover {
-    filter: brightness(80%);
-    opacity: 0.86;
-    transform: scale(0.9)
+.previous:hover,
+.reading:hover {
+  filter: brightness(80%);
+  opacity: 0.86;
+  transform: scale(0.9);
 }
 
 .profile__email {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .email__input {
-    margin-left: 8px;
-=======
-.hidden {
-  display: none;
+  margin-left: 8px;
 }
