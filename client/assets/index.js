@@ -37,7 +37,6 @@ async function loadBooks() {
     },
   };
   const response = await fetch("http://localhost:3000/books", options);
-  console.log(response);
   if (response.status === 200) {
     const books = await response.json();
     books.forEach((book) => {

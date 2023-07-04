@@ -12,6 +12,10 @@ const burgerMenu = document.querySelector("#burger-menu");
 const userIcon = document.querySelector("#user-icon");
 
 hamburger.addEventListener("click", openBurger);
+userIcon.addEventListener("click", () => {
+  localStorage.removeItem("title");
+  window.location.assign("./user.html");
+});
 
 logo.addEventListener("click", () => {
   window.location.assign("index.html");
