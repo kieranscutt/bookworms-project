@@ -17,7 +17,7 @@ CREATE TABLE book (
     title VARCHAR(100) UNIQUE NOT NULL,
     author VARCHAR(200) NOT NULL,
     genre VARCHAR(100) NOT NULL,
-    short_description VARCHAR(2000) UNIQUE NOT NULL,
+    short_description VARCHAR(2000) NOT NULL,
     book_cover VARCHAR(200) NULL,
     borrow_date DATE,
     return_date DATE,

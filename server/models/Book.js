@@ -7,7 +7,7 @@ class Book {
     title,
     author,
     genre,
-    description,
+    short_description,
     book_cover,
     borrow_date,
     return_date,
@@ -17,7 +17,7 @@ class Book {
     this.title = title;
     this.author = author;
     this.genre = genre;
-    this.description = description;
+    this.short_description = short_description;
     this.book_cover = book_cover;
     this.borrow_date = borrow_date;
     this.return_date = return_date;
