@@ -205,6 +205,11 @@ nav {
   transform: scale(105%);
 }
 
+.trendingBook {
+  height: 234px;
+  width: 156px;
+}
+
 .trendingBooksTitle {
   font-size: 48px;
   font-weight: 400;
@@ -265,6 +270,7 @@ a:hover {
   margin-top: 15px;
   margin-left: 20px;
   height: 0;
+  width: 300px;
   background-color: #6096b4;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   overflow: hidden;
@@ -279,6 +285,31 @@ a:hover {
 }
 
 .genreMenu li {
+  padding: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.burger-menu {
+  margin-top: -6px;
+  margin-left: 0px;
+  height: 0;
+  width: 300px;
+  background-color: #6096b4;
+  transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  overflow: hidden;
+  z-index: 5;
+  border-radius: 8px;
+}
+
+.burger-menu.open {
+  height: 130px;
+  width: 300px;
+  border: solid #6096b4 2px;
+}
+
+.burger-menu li {
   padding: 0.7rem;
   display: flex;
   align-items: center;
