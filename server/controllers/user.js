@@ -8,8 +8,8 @@ async function register(req, res) {
     const salt = await bcrypt.genSalt(parseInt(process.env.BCRYPT_SALT_ROUNDS));
 
     data.password = await bcrypt.hash(data.password, salt);
-    
-    const result = await User.create(data)
+
+    const result = await User.create(data);
 
     res.status(201).send(result);
   } catch (err) {
@@ -20,8 +20,8 @@ async function register(req, res) {
 async function login(req, res) {
   try {
     const data = req.body;
-    const user = await User.getOneByUsername(data.username);
-
+    console.log(data);
+    const user = await User.getOneByEmail(data.email);
     const authenticated = await bcrypt.compare(data.password, user.password);
 
     if (!authenticated) {
@@ -37,8 +37,8 @@ async function login(req, res) {
 
 async function destroy(req, res) {
   try {
-    const name = req.params.username;
-    const user = await User.getOneByUsername(name);
+    const email = req.params.email;
+    const user = await User.getOneByEmail(email);
     const result = await user.destroy();
     res.status(204).end();
   } catch (err) {
@@ -48,9 +48,9 @@ async function destroy(req, res) {
 
 async function update(req, res) {
   try {
-    const name = req.params.username;
+    const email = req.params.email;
     const data = req.body;
-    const user = await User.getOneByUsername(name);
+    const user = await User.getOneByEmail(email);
     const result = await user.update(data);
     res.status(200).json(result);
   } catch (err) {

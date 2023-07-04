@@ -10,7 +10,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      username: form.get("username"),
+      email: form.get("email"),
       password: form.get("password"),
     }),
   };
