@@ -79,10 +79,12 @@ VALUES
     ('Ender''s Game', 'Orson Scott Card', 'Action Adventure', 'Child prodigies trained to save the world from an alien invasion.');
 
 
+
 CREATE TABLE token (
     token_id INT GENERATED ALWAYS AS IDENTITY,
     user_id INT NOT NULL,
     token CHAR(36) UNIQUE NOT NULL,
     PRIMARY KEY (token_id),
+
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
