@@ -65,20 +65,8 @@ body {
   margin-top: 20px;
 }
 
-#login-input {
+.login-input {
   position: relative;
-  width: 538px;
-  height: 63px;
-  background-color: #eee9da;
-  border: 3px solid #6096b4;
-  border-radius: 8px;
-  font-size: 32px;
-  font-weight: lighter;
-  top: 20px;
-  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.7);
-}
-
-#login-input {
   width: 538px;
   height: 63px;
   background-color: #eee9da;
