@@ -49,7 +49,7 @@ VALUES
     ('Gone Baby Gone', 
     'Dennis Lehane', 
     'Thriller', 
-    'In the gritty streets of Boston\''s seedy underworld, two private investigators, Patrick Kenzie and Angela Gennaro, are hired to find a missing four-year-old girl named Amanda McCready. As they delve deeper into the case, they uncover a labyrinth of corruption, moral dilemmas, and shocking revelations that lead them to question their own motives and the true meaning of justice. "Gone Baby Gone" is a gripping and morally complex thriller that explores themes of child abduction, societal decay, and the blurred lines between right and wrong. Lehane\''s masterful storytelling keeps readers hooked until the heart-wrenching conclusion.', 
+    'In the gritty streets of Boston''s seedy underworld, two private investigators, Patrick Kenzie and Angela Gennaro, are hired to find a missing four-year-old girl named Amanda McCready. As they delve deeper into the case, they uncover a labyrinth of corruption, moral dilemmas, and shocking revelations that lead them to question their own motives and the true meaning of justice. "Gone Baby Gone" is a gripping and morally complex thriller that explores themes of child abduction, societal decay, and the blurred lines between right and wrong. Lehane\''s masterful storytelling keeps readers hooked until the heart-wrenching conclusion.', 
     'https://covers.openlibrary.org/b/id/431857-L.jpg'),
 
     ('The Girl Before', 
@@ -333,6 +333,5 @@ CREATE TABLE token (
     user_id INT NOT NULL,
     token CHAR(36) UNIQUE NOT NULL,
     PRIMARY KEY (token_id),
-
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
