@@ -14,6 +14,7 @@ genreButton.addEventListener("click", openGenre);
 userIcon.addEventListener("click", () => {
   window.location.assign("./user.html");
 });
+
 genreLinks.forEach((link) => link.addEventListener("click", loadGenreBooks));
 window.addEventListener("load", loadBooks);
 
@@ -66,3 +67,4 @@ async function loadGenreBooks(event) {
     window.location.assign("./index.html");
   }
 }
+
