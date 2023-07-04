@@ -376,3 +376,12 @@ a:hover {
     opacity: 0.86;
     transform: scale(0.9)
 }
+
+.profile__email {
+    display: flex;
+    align-items: center;
+}
+
+.email__input {
+    margin-left: 8px;
+}
