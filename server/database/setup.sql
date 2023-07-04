@@ -206,11 +206,11 @@ VALUES
     'Emma Morley and Dexter Mayhew meet on July 15th, 1988, and their lives intersect on the same date each year for the next two decades. As they navigate career ups and downs, personal struggles, and the challenges of growing up, their connection deepens and evolves. This heartfelt novel explores the beauty and complexities of long-term friendship and love.',
     'https://covers.openlibrary.org/b/id/10792993-L.jpg'),
 
-    ('Where the Wild Things Are', 
-    'Maurice Sendak', 
+    ('The Clever Kitten', 
+    'Enid Blyton', 
     'Kids', 
-    'Join young Max on an imaginative adventure as he sails away to a world of wild creatures. Maurice Sendak\''s beloved picture book explores themes of imagination, childhood, and the power of the wild within us all.',
-    'https://covers.openlibrary.org/b/id/13978816-L.jpg'),
+    'Enid Blyton''s ''The Clever Kitten'' is a delightful children''s book that follows the adventures of a little kitten named Whiskers. Whiskers is no ordinary kitten - he possesses a remarkable talent for problem-solving and a keen ability to help others. In this heartwarming tale set in the countryside, Whiskers encounters a variety of exciting and sometimes mischievous situations. Along the way, he meets friendly farm animals, playful mice, and other charming characters. Whiskers uses his cleverness and wit to navigate challenges and assist those in need.',
+    'https://covers.openlibrary.org/b/id/11605177-L.jpg'),
 
     ('The Chronicles of Narnia', 
     'C.S. Lewis', 
@@ -218,11 +218,11 @@ VALUES
     'Immerse yourself in the enchanting world of Narnia, a magical realm filled with talking animals, mythical creatures, and epic adventures. Follow the Pevensie siblings as they step through a wardrobe and discover a land frozen in eternal winter under the rule of the White Witch. As they embark on a journey alongside the wise lion Aslan, they encounter battles, treachery, and ultimately witness the triumph of good over evil. This beloved series of fantasy novels captures the imagination of readers young and old, exploring themes of courage, loyalty, and the power of belief.',
     'https://covers.openlibrary.org/b/id/10565686-L.jpg'),
     
-   ('The Very Hungry Caterpillar', 
-   'Eric Carle', 
+   ('Mrs Pepperpot stories', 
+   'Alf Proysen', 
    'Kids', 
-   'Join the hungry caterpillar on its delightful journey as it munches through various foods and transforms into a beautiful butterfly. This colorful picture book captivates young readers with its vibrant illustrations and simple, repetitive text. Through the caterpillar''s whimsical adventure, children learn about numbers, days of the week, and the life cycle of a butterfly. Eric Carle''s timeless classic continues to charm generations with its interactive format and positive message of growth and transformation.', 
-   'https://covers.openlibrary.org/b/id/8239499-L.jpg'),
+   'Mrs Pepperpot can''t choose when she will shrink to the size of a pepperpot - it just happens. But whatever she encounters, whether it be a mountain of pancakes, a crafty fox or a monstrous mousetrap, little Mrs Pepperpot will always come out on top.', 
+   'https://covers.openlibrary.org/b/id/13094031-L.jpg'),
 
     ('Charlie and the Chocolate Factory', 
     'Roald Dahl', 
