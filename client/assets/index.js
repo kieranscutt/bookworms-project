@@ -20,6 +20,7 @@ window.addEventListener("load", loadBooks);
 trendingBooks.forEach((book) =>
   book.addEventListener("click", openTrendingBook)
 );
+genreBooks.forEach((book) => book.addEventListener("click", openGenreBook));
 
 function openBurger() {
   burgerMenu.classList.toggle("open");
@@ -73,17 +74,12 @@ async function loadGenreBooks(event) {
 
 async function openTrendingBook(event) {
   const title = event.target.alt;
-  const options = {
-    headers: {
-      Authorization: localStorage.getItem("token"),
-    },
-    redirect: "follow",
-  };
+  localStorage.setItem("title", title);
+  window.location.assign("book.html");
+}
 
-  await fetch(`http://localhost:3000/books/${title}`, options)
-    .then((response) => response.json())
-    .then((json) => {
-      console.log(json);
-      window.location.assign("./book.html");
-    });
+async function openGenreBook(event) {
+  const title = event.target.alt;
+  localStorage.setItem("title", title);
+  window.location.assign("book.html");
 }
