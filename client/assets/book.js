@@ -48,7 +48,6 @@ async function formSubmission(event) {
 
         if (foundBook) {
           displayBook(foundBook);
-          clearBookDetails();
         } else {
           clearBookDetails();
         }
