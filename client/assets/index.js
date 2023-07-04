@@ -15,6 +15,7 @@ userIcon.addEventListener("click", () => {
   window.location.assign("./user.html");
 });
 genreLinks.forEach((link) => link.addEventListener("click", loadGenreBooks));
+window.addEventListener("load", loadBooks);
 
 function openBurger() {
   burgerMenu.classList.toggle("open");
@@ -45,6 +46,7 @@ async function loadBooks() {
 
 async function loadGenreBooks(event) {
   genreGrid.classList.remove("hidden");
+  genreMenu.classList.remove("open");
   const link = event.target.innerHTML;
 
   const options = {
@@ -64,5 +66,3 @@ async function loadGenreBooks(event) {
     window.location.assign("./index.html");
   }
 }
-
-loadBooks();
