@@ -73,17 +73,6 @@ async function loadGenreBooks(event) {
 
 async function openTrendingBook(event) {
   const title = event.target.alt;
-  const options = {
-    headers: {
-      Authorization: localStorage.getItem("token"),
-    },
-    redirect: "follow",
-  };
-
-  await fetch(`http://localhost:3000/books/${title}`, options)
-    .then((response) => response.json())
-    .then((json) => {
-      console.log(json);
-      window.location.assign("./book.html");
-    });
+  localStorage.setItem("title", title);
+  window.location.assign("book.html");
 }
