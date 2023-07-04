@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User information</title>
+    <link rel="stylesheet" href="default.css" />
+    <script
+      src="https://kit.fontawesome.com/e0f29e24ce.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="assets/user.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <i id="hamburger" class="fa-solid fa-bars"></i>
+        <i id="user-icon" class="fa-regular fa-user"></i>
+        <h1 id="logo">Bookworms</h1>
+        <form id="search-form">
+          <input type="text" id="searchbar" placeholder="Search Books" />
+          <button type="submit" id="search-button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </nav>
+
+      <section class="container">
+          <div class="profile">
+              <div class="profile__logo">
+                  <h1 class="profile__letter">K</h1>
+                </div>
+                <div class="profile__name">
+                    <h2 class="name">Name:</h2>
+                    <h2 class="name__input">Kieran</h2>
+                </div>
+            </div>
+            <section class="CurrentBooks">
+                <h1 class="trendingBooksTitle">Currently Reading</h1>
+                <section class="CurrentGrid">
+                  <img src="images/harrypotter.png" alt="harrypotter" class="reading" />
+                </section>
+            <section class="PreviousBooks">
+                <h1 class="trendingBooksTitle">Previous Books</h1>
+                <section class="previousGrid">
+                  <img src="images/lunarstorm.png" alt="lunarstorm" class="previous" />
+                  <img
+                    src="images/thehypocriteworld.png"
+                    alt="thehypocriteworld"
+                    class="previous"
+                  />
+                  <img src="images/normalpeople.png" alt="normalpeople" class="previous" />
+                  <img
+                    src="images/thegreatgatsby.png"
+                    alt="thegreatgatsby"
+                    class="previous"
+                  />
+                </section>
+      </section>
+</body>
+</html>
