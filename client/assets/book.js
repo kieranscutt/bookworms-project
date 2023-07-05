@@ -100,7 +100,7 @@ function clearBookDetails() {
   descriptionElement.textContent = "";
 }
 
-///
+//
 const borrowBtn = document.getElementById("borrow-btn");
 borrowBtn.addEventListener("click", borrowBook);
 
