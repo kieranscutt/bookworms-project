@@ -19,6 +19,9 @@ logo.addEventListener("click", () => {
 
 searchForm.addEventListener("submit", formSubmission);
 
+if (localStorage.getItem("token") == undefined) {
+  window.location.assign("login.html");
+}
 localStorage.removeItem("title");
 
 function openBurger() {
@@ -110,7 +113,7 @@ async function currentlyReading() {
       imgWrapper.appendChild(bookImage);
     });
   } else {
-    console.log("hi");
+    window.location.assign("login.html");
     const noBooks = document.createElement("h2");
     noBooks.innerHTML = "No currently borrowed books";
     currentGrid.appendChild(noBooks);
