@@ -7,11 +7,24 @@ const titleElement = document.getElementById("title");
 const authorElement = document.getElementById("author");
 const genreElement = document.getElementById("genre");
 const descriptionElement = document.getElementById("description");
+const hamburger = document.querySelector("#hamburger");
+const burgerMenu = document.querySelector("#burger-menu");
+const userIcon = document.querySelector("#user-icon");
+
+hamburger.addEventListener("click", openBurger);
+userIcon.addEventListener("click", () => {
+  localStorage.removeItem("title");
+  window.location.assign("./user.html");
+});
 
 logo.addEventListener("click", () => {
   window.location.assign("index.html");
   localStorage.removeItem("title");
 });
+
+function openBurger() {
+  burgerMenu.classList.toggle("open");
+}
 
 async function displayStoredBook() {
   const storedTitle = localStorage.getItem("title");
