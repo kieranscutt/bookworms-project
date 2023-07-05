@@ -1,3 +1,4 @@
+localStorage.removeItem("title");
 document.getElementById("login-form").addEventListener("submit", async (e) => {
   e.preventDefault();
 
