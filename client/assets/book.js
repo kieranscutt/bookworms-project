@@ -20,6 +20,10 @@ logo.addEventListener("click", () => {
   window.location.assign("index.html");
 });
 
+if (localStorage.getItem("token") == undefined) {
+  window.location.assign("login.html");
+}
+
 function openBurger() {
   burgerMenu.classList.toggle("open");
 }
@@ -43,7 +47,7 @@ async function displayStoredBook() {
     genreElement.textContent = `Genre: ${storedBook.genre}`;
     descriptionElement.textContent = storedBook.short_description;
   } else {
-    window.location.assign("book.html");
+    window.location.assign("login.html");
   }
 }
 
@@ -109,7 +113,6 @@ borrowBtn.addEventListener("click", borrowBook);
 
 async function borrowBook() {
   const title = titleElement.innerText.toLowerCase();
-  console.log(title);
 
   const currentDate = new Date();
   const borrowDate = currentDate.toLocaleDateString("en-GB");
