@@ -28,7 +28,7 @@ function openBurger() {
 
 async function getUserInfo() {
   const token = JSON.parse(localStorage.getItem("token"));
-  const id = token.user_id
+  const id = token.user_id;
   const response = await fetch(`http://localhost:3000/users/${id}`);
   const data = await response.json();
   emailRef.innerHTML = data.email;

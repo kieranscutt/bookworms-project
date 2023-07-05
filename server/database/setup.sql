@@ -19,8 +19,8 @@ CREATE TABLE book (
     genre VARCHAR(100) NOT NULL,
     short_description VARCHAR(2000) NOT NULL,
     book_cover VARCHAR(200) NULL,
-    borrow_date DATE,
-    return_date DATE,
+    borrow_date VARCHAR(10),
+    return_date VARCHAR(10),
     PRIMARY KEY (book_id),
     FOREIGN KEY (user_id) REFERENCES users(user_id)
 );
