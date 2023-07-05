@@ -37,28 +37,6 @@ async function getUserInfo() {
   
 }
 
-//async function loadGenreBooks(event) {
-//  genreGrid.classList.remove("hidden");
-//  genreMenu.classList.remove("open");
-//  const link = event.target.innerHTML;
-//
-//  const options = {
-//    headers: {
-//      Authorization: localStorage.getItem("token"),
-//    },
-//  };
-//  const response = await fetch("http://localhost:3000/books", options);
-//  if (response.status === 200) {
-//    const books = await response.json();
-//    const filteredBooks = books.filter((book) => book.genre == link);
-//    filteredBooks.forEach((book) => {
-//      genreBooks[filteredBooks.indexOf(book)].src = book.book_cover;
-//      genreBooks[filteredBooks.indexOf(book)].alt = book.title;
-//    });
-//  } else {
-//    window.location.assign("./index.html");
-//  }
-//}
 
 async function currentlyReading() {
   const currentGrid = document.querySelector(".CurrentGrid")
