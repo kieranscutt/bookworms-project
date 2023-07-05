@@ -1,5 +1,3 @@
-
-
 const nameRef = document.querySelector(".name__input");
 const emailRef = document.querySelector(".email__input");
 const letterRef = document.querySelector(".profile__letter");
