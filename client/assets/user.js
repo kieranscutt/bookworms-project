@@ -25,24 +25,15 @@ function openBurger() {
 
 //token = {token_id: 7, user_id: 3, token: '07cff7b3-0f0a-4382-b035-58e244061e1d'}
 
-async function emailInput() {
-  const response = await fetch("http://localhost:3000/users/email");
+async function getUserInfo() {
+  const token = JSON.parse(localStorage.getItem("token"));
+  const id = token.user_id
+  const response = await fetch(`http://localhost:3000/users/${id}`);
   const data = await response.json();
   emailRef.innerHTML = data.email;
+  nameRef.innerHTML = data.firstname;
+  letterRef.innerHTML = data.firstname[0];
+  
 }
 
-async function nameInput() {
-  const response = await fetch("https//:loacalhost:3000/users/first_name");
-  const data = await response.json();
-  nameRef.innerHTML = data.first_name;
-}
-
-async function nameInput() {
-  const response = await fetch("https//:loacalhost:3000/users/first_name");
-  const data = await response.json();
-  nameRef.innerHTML = data.first_name[0];
-}
-
-letterInput();
-nameInput();
-emailInput();
+getUserInfo();
