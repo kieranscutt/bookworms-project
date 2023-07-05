@@ -102,81 +102,18 @@ function clearBookDetails() {
 const token = JSON.parse(localStorage.getItem("token"));
 const user_id = token.user_id;
 
-//
-const borrowBtn = document.getElementById("borrow-btn");
+/// BORROW
+
+let borrowBtn = document.getElementById("borrow-btn");
 borrowBtn.addEventListener("click", borrowBook);
-//
 
-// Borrow function
-<<<<<<< HEAD
-// async function borrowBook(token) {
-//   const title = titleElement.innerText;
-
-//   console.log(title); // to remove later
-
-//   const currentDate = new Date();
-//   const borrowDate = currentDate.toLocaleDateString("en-GB");
-
-//   console.log("Borrow Date:", borrowDate); // to remove later
-
-//   const returnDate = new Date(currentDate);
-//   returnDate.setDate(returnDate.getDate() + 14);
-//   const formattedReturnDate = returnDate.toLocaleDateString("en-GB");
-
-//   console.log("Return Date:", formattedReturnDate); // to remove later
-
-//   const options = {
-//     method: "PATCH",
-//     headers: {
-//       Authorization: token,
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify({
-//       user_id: 1,
-//       borrow_date: borrowDate,
-//       return_date: formattedReturnDate,
-//       title: title,
-//     }),
-//   };
-
-//   try {
-//     const response = await fetch(
-//       `http://localhost:3000/books/${title}`,
-//       options
-//     );
-//     console.log("Response:", response); // to remove later
-//     if (response.status === 200) {
-//       alert(`Book borrowed successfully!`);
-//       // \nThe book must be returned on ${returnDate} // to implement later
-//     } else {
-//       const errorData = await response.json();
-//       alert(`Book borrowing failed: ${errorData.message}`);
-//     }
-//   } catch (error) {
-//     console.error("Error borrowing book:", error);
-//   }
-// }
-
-async function borrowBook(token) {
-  const titleElement = document.getElementById("title");
-=======
 async function borrowBook() {
->>>>>>> 4140952a448beecee56c37a5a238b53e1a943d60
   const title = titleElement.innerText.toLowerCase();
   console.log(title);
 
   const currentDate = new Date();
   const borrowDate = currentDate.toLocaleDateString("en-GB");
 
-<<<<<<< HEAD
-  console.log(borrowDate);
-
-  const returnDate = new Date(currentDate);
-  returnDate.setDate(returnDate.getDate() + 14);
-  const formattedReturnDate = returnDate.toLocaleDateString("en-GB");
-  console.log("return date:", formattedReturnDate);
-
-=======
   const returnDate = new Date(currentDate);
   returnDate.setDate(returnDate.getDate() + 14);
   const formattedReturnDate = returnDate.toLocaleDateString("en-GB");
@@ -185,44 +122,27 @@ async function borrowBook() {
     borrow_date: borrowDate.toString(),
     return_date: formattedReturnDate.toString(),
   };
->>>>>>> 4140952a448beecee56c37a5a238b53e1a943d60
   const options = {
     method: "PATCH",
     headers: {
-      Authorization: token,
+      Authorization: localStorage.getItem("token"),
       "Content-Type": "application/json",
     },
-<<<<<<< HEAD
-    body: JSON.stringify({
-      user_id: null, // Replace with the appropriate user ID
-      borrow_date: borrowDate,
-      return_date: formattedReturnDate,
-      title: title,
-    }),
-=======
     body: JSON.stringify(data),
->>>>>>> 4140952a448beecee56c37a5a238b53e1a943d60
   };
   try {
     const response = await fetch(
-<<<<<<< HEAD
-      `http://localhost:3000/books/${encodeURI(title)}`,
-      options
-    );
-    console.log("Response:", response);
-    if (response.status === 200) {
-      alert(`Book borrowed successfully!`);
-      // The book must be returned on ${formattedReturnDate}
-=======
       `http://localhost:3000/books/${title}`,
       options
     );
     console.log(response);
-    if (response.status == 200) {
+    if (response.status === 200) {
       const newResponse = response.json();
-      alert(`Book borrowed successfully!`);
-      // \nThe book must be returned on ${returnDate} // to implement later
->>>>>>> 4140952a448beecee56c37a5a238b53e1a943d60
+      alert(
+        `Book borrowed successfully!\nThe book must be returned on ${formattedReturnDate}`
+      );
+      borrowBtn.value = "You are borrowing this book";
+      borrowBtn.disabled = true;
     } else {
       alert(`Book borrowing failed.`);
     }
@@ -230,3 +150,39 @@ async function borrowBook() {
     console.error("Error borrowing book:", error);
   }
 }
+
+async function isBorrowed() {
+  const storedTitle = localStorage.getItem("title");
+  const options = {
+    headers: {
+      Authorization: localStorage.getItem("token"),
+    },
+  };
+
+  const response = await fetch(
+    `http://localhost:3000/books/${storedTitle}`,
+    options
+  );
+  if (response.status == 200) {
+    const storedBook = await response.json();
+
+    if (storedBook.user_id && storedBook.user_id === user_id) {
+      const borrowedMessage = document.createElement("p");
+      borrowedMessage.textContent =
+        "Apologies, but this book is currently unavailable.";
+      borrowedMessage.style.fontSize = "28px";
+      borrowedMessage.style.color = "crimson";
+      borrowedMessage.style.fontWeight = "bold";
+      borrowedMessage.style.fontFamily = "Arial, sans-serif";
+      borrowedMessage.style.textAlign = "center";
+      borrowedMessage.style.marginTop = "20px";
+      borrowedMessage.style.textShadow = "2px 2px 4px rgba(0, 0, 0, 0.3)";
+      borrowedMessage.style.textTransform = "uppercase";
+      borrowBtn.replaceWith(borrowedMessage);
+    }
+  } else {
+    window.location.assign("book.html");
+  }
+}
+
+isBorrowed();
