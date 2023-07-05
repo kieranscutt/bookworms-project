@@ -32,6 +32,7 @@ localStorage.removeItem("title");
 
 function openBurger() {
   burgerMenu.classList.toggle("open");
+  hamburger.classList.toggle("active");
 }
 
 function openGenre() {
