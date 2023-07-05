@@ -1,28 +1,5 @@
 // book page
-let bookTitle = document.querySelector("#title");
-let bookAuthor = document.querySelector("#author");
-let bookGenre = document.querySelector("#genre");
-let bookDescription = document.querySelector("#description");
-
-async function displayBook(book) {
-  const response = await fetch(`http://localhost:3000/books/${book}`);
-  const data = await response.json();
-
-  const titleElement = document.querySelector("#title");
-  const authorElement = document.querySelector("#author");
-  const genreElement = document.querySelector("#genre");
-  const descriptionElement = document.querySelector("#description");
-
-  titleElement.textContent = data.title;
-  authorElement.textContent = data.author;
-  genreElement.textContent = data.genre;
-  descriptionElement.textContent = data.short_description;
-
-  console.log(data);
-}
-//////////////////////////////////////////////////////////////////////////
-// SEARCH BAR
-
+const logo = document.querySelector("#logo");
 const searchForm = document.getElementById("search-form");
 const searchInput = document.getElementById("searchbar");
 const bookCover = document.getElementById("book-cover");
@@ -30,6 +7,42 @@ const titleElement = document.getElementById("title");
 const authorElement = document.getElementById("author");
 const genreElement = document.getElementById("genre");
 const descriptionElement = document.getElementById("description");
+
+logo.addEventListener("click", () => {
+  window.location.assign("index.html");
+  localStorage.removeItem("title");
+});
+
+async function displayStoredBook() {
+  const storedTitle = localStorage.getItem("title");
+  const options = {
+    headers: {
+      Authorization: localStorage.getItem("token"),
+    },
+  };
+  const response = await fetch(
+    `http://localhost:3000/books/${storedTitle}`,
+    options
+  );
+  console.log(response);
+  if (response.status == 200) {
+    const storedBook = await response.json();
+    bookCover.src = storedBook.book_cover;
+    titleElement.textContent = storedBook.title;
+    authorElement.textContent = `Author: ${storedBook.author}`;
+    genreElement.textContent = `Genre: ${storedBook.genre}`;
+    descriptionElement.textContent = storedBook.short_description;
+  } else {
+    window.location.assign("book.html");
+  }
+}
+
+if (localStorage.length == 2) {
+  displayStoredBook();
+}
+
+//////////////////////////////////////////////////////////////////////////
+// SEARCH BAR
 
 searchForm.addEventListener("submit", formSubmission);
 
