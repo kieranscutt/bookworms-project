@@ -3,31 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="login.css" />
     <script defer src="assets/login.js"></script>
     <title>Login</title>
   </head>
   <body>
-    <form id="login-form">
+    <h1 class="title">Bookworms</h1>
+    <div class="login-box">
       <h1 class="loginTitle">Login Form</h1>
-      <input
+    <form id="login-form">
+      <div class="user-box">
+        <input
         type="text"
         class="login-input"
         name="email"
         id="login-input-email"
         placeholder="Email Address"
-      />
-      <input
+        />
+      </div>
+      <div class="user-box">
+        <input
         type="password"
         class="login-input"
         name="password"
         id="login-input-password"
         placeholder="Password"
-      />
-      <input type="submit" value="Login" id="login-btn" />
-      <a href="register.html" id="link-to-register"
+        />
+      </div>
+        <input type="submit" value="Login" id="login-btn" />
+    </form>
+    <a href="register.html" id="link-to-register"
         ><u>Don't have an account? Register.</u></a
       >
-    </form>
+  </div>
   </body>
 </html>
