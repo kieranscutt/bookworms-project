@@ -1,15 +1,15 @@
 ## Installation
 
 Clone this repo
-In terminal navigate to bookworms-project.
-Run npm install to install dependencies.
+In terminal navigate to bookworms-project
+Run npm install to install dependencies
 
 ## Technologies Used.
 
 Frontend
 HTML CSS JavaScript
+
 Backend
-NodeJS
 Express
 dotenv
 Cors
@@ -43,7 +43,7 @@ As you may already know, books bring forth a myriad of splendid benefits, includ
 
     - Lifelong Companion: Books are extraordinary companions that accompany us throughout our lives, through the wondrous chapters of our personal journeys. They offer solace, camaraderie, and intellectual stimulation, remaining steadfast through the ever-changing tides of time.
 
-To make use of our library, follow these simple steps:
+## To make use of our library, follow these simple steps:
 
     - Register and log in to your account. This will give you access to all the features and functionalities of our library.
 
