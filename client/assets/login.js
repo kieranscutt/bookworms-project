@@ -20,9 +20,13 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
   const data = await response.json();
 
   if (response.status == 200) {
-    localStorage.setItem("token", data.token);
+    localStorage.setItem("token", JSON.stringify(data.token));
     window.location.assign("index.html");
+    const token = JSON.parse(localStorage.getItem("token"));
+    console.log(token)
   } else {
     alert(data.error);
   }
 });
+
+module.exports = token
