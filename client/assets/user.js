@@ -68,28 +68,6 @@ async function getUserInfo() {
   letterRef.innerHTML = data.first_name[0].toUpperCase();
 }
 
-//async function loadGenreBooks(event) {
-//  genreGrid.classList.remove("hidden");
-//  genreMenu.classList.remove("open");
-//  const link = event.target.innerHTML;
-//
-//  const options = {
-//    headers: {
-//      Authorization: localStorage.getItem("token"),
-//    },
-//  };
-//  const response = await fetch("http://localhost:3000/books", options);
-//  if (response.status === 200) {
-//    const books = await response.json();
-//    const filteredBooks = books.filter((book) => book.genre == link);
-//    filteredBooks.forEach((book) => {
-//      genreBooks[filteredBooks.indexOf(book)].src = book.book_cover;
-//      genreBooks[filteredBooks.indexOf(book)].alt = book.title;
-//    });
-//  } else {
-//    window.location.assign("./index.html");
-//  }
-//}
 
 async function currentlyReading() {
   const currentGrid = document.querySelector(".CurrentGrid");
@@ -111,6 +89,14 @@ async function currentlyReading() {
 
       bookImage.addEventListener("click", openBook);
       imgWrapper.appendChild(bookImage);
+
+      const returnBtn = document.createElement("input");
+      returnBtn.value = "return"
+      returnBtn.type = "button"
+      returnBtn.id = "returnBtn"
+      imgWrapper.appendChild(returnBtn)
+      returnBtn.addEventListener("click", returnBook )
+
     });
   } else {
     window.location.assign("login.html");
@@ -127,4 +113,39 @@ function openBook(e) {
   const title = e.target.alt;
   localStorage.setItem("title", title);
   window.location.assign("book.html");
+}
+
+async function returnBook(e) {
+  const title = e.target.parentElement.querySelector("img").alt;
+  console.log(title)
+  e.target.parentElement.remove();
+  
+  const data = {
+    user_id: null,
+    borrow_date: null,
+    return_date: null,
+  };
+  const options = {
+    method: "PATCH",
+    headers: {
+      Authorization: localStorage.getItem("token"),
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(data),
+  };
+  try {
+    const response = await fetch(
+      `http://localhost:3000/books/${title}`,
+      options
+    );
+    if (response.status == 200) {
+      const responseData = await response.json();
+      alert(`Book returned successfully!`);
+      // \nThe book must be returned on ${returnDate} // to implement later
+    } else {
+      alert(`Book return failed.`);
+    }
+  } catch (error) {
+    console.error("Error returning book:", error);
+  }
 }
