@@ -184,20 +184,12 @@ async function isBorrowed() {
   );
   if (response.status == 200) {
     const storedBook = await response.json();
-
-    if (storedBook.user_id && storedBook.user_id === user_id) {
-      const borrowedMessage = document.createElement("p");
-      borrowedMessage.textContent =
-        "Apologies, but this book is currently unavailable.";
-      borrowedMessage.style.fontSize = "28px";
-      borrowedMessage.style.color = "crimson";
-      borrowedMessage.style.fontWeight = "bold";
-      borrowedMessage.style.fontFamily = "Arial, sans-serif";
-      borrowedMessage.style.textAlign = "center";
-      borrowedMessage.style.marginTop = "20px";
-      borrowedMessage.style.textShadow = "2px 2px 4px rgba(0, 0, 0, 0.3)";
-      borrowedMessage.style.textTransform = "uppercase";
-      borrowBtn.replaceWith(borrowedMessage);
+    if (storedBook.user_id == user_id) {
+      borrowBtn.value = "You are borrowing this book";
+      borrowBtn.disabled = true;
+    } else if (storedBook.user_id) {
+      borrowBtn.value = `Unavailable until ${storedBook.return_date}`;
+      borrowBtn.disabled = true;
     }
   } else {
     window.location.assign("book.html");
