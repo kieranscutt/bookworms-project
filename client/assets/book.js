@@ -106,11 +106,11 @@ function clearBookDetails() {
 const token = JSON.parse(localStorage.getItem("token"));
 const user_id = token.user_id;
 
-//
-const borrowBtn = document.getElementById("borrow-btn");
+/// BORROW
+
+let borrowBtn = document.getElementById("borrow-btn");
 borrowBtn.addEventListener("click", borrowBook);
 
-// Borrow function
 async function borrowBook() {
   const title = titleElement.innerText.toLowerCase();
 
@@ -138,10 +138,14 @@ async function borrowBook() {
       `http://localhost:3000/books/${title}`,
       options
     );
-    if (response.status == 200) {
+    console.log(response);
+    if (response.status === 200) {
       const newResponse = response.json();
-      alert(`Book borrowed successfully!`);
-      // \nThe book must be returned on ${returnDate} // to implement later
+      alert(
+        `Book borrowed successfully!\nThe book must be returned on ${formattedReturnDate}`
+      );
+      borrowBtn.value = "You are borrowing this book";
+      borrowBtn.disabled = true;
     } else {
       alert(`Book borrowing failed.`);
     }
@@ -149,3 +153,39 @@ async function borrowBook() {
     console.error("Error borrowing book:", error);
   }
 }
+
+async function isBorrowed() {
+  const storedTitle = localStorage.getItem("title");
+  const options = {
+    headers: {
+      Authorization: localStorage.getItem("token"),
+    },
+  };
+
+  const response = await fetch(
+    `http://localhost:3000/books/${storedTitle}`,
+    options
+  );
+  if (response.status == 200) {
+    const storedBook = await response.json();
+
+    if (storedBook.user_id && storedBook.user_id === user_id) {
+      const borrowedMessage = document.createElement("p");
+      borrowedMessage.textContent =
+        "Apologies, but this book is currently unavailable.";
+      borrowedMessage.style.fontSize = "28px";
+      borrowedMessage.style.color = "crimson";
+      borrowedMessage.style.fontWeight = "bold";
+      borrowedMessage.style.fontFamily = "Arial, sans-serif";
+      borrowedMessage.style.textAlign = "center";
+      borrowedMessage.style.marginTop = "20px";
+      borrowedMessage.style.textShadow = "2px 2px 4px rgba(0, 0, 0, 0.3)";
+      borrowedMessage.style.textTransform = "uppercase";
+      borrowBtn.replaceWith(borrowedMessage);
+    }
+  } else {
+    window.location.assign("book.html");
+  }
+}
+
+isBorrowed();
