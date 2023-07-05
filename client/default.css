@@ -423,3 +423,7 @@ a:hover {
 .email__input {
   margin-left: 8px;
 }
+
+.reading {
+  max-height: 230px;
+}
