@@ -8,6 +8,7 @@ const hamburger = document.querySelector("#hamburger");
 const burgerMenu = document.querySelector("#burger-menu");
 const userIcon = document.querySelector("#user-icon");
 
+
 hamburger.addEventListener("click", openBurger);
 userIcon.addEventListener("click", () => {
   window.location.assign("./user.html");
@@ -31,8 +32,70 @@ async function getUserInfo() {
   const response = await fetch(`http://localhost:3000/users/${id}`);
   const data = await response.json();
   emailRef.innerHTML = data.email;
-  nameRef.innerHTML = data.first_name;
-  letterRef.innerHTML = data.first_name[0];
+  nameRef.innerHTML = data.first_name+ " " + data.last_name;
+  letterRef.innerHTML = data.first_name[0].toUpperCase();
+  
+}
+
+//async function loadGenreBooks(event) {
+//  genreGrid.classList.remove("hidden");
+//  genreMenu.classList.remove("open");
+//  const link = event.target.innerHTML;
+//
+//  const options = {
+//    headers: {
+//      Authorization: localStorage.getItem("token"),
+//    },
+//  };
+//  const response = await fetch("http://localhost:3000/books", options);
+//  if (response.status === 200) {
+//    const books = await response.json();
+//    const filteredBooks = books.filter((book) => book.genre == link);
+//    filteredBooks.forEach((book) => {
+//      genreBooks[filteredBooks.indexOf(book)].src = book.book_cover;
+//      genreBooks[filteredBooks.indexOf(book)].alt = book.title;
+//    });
+//  } else {
+//    window.location.assign("./index.html");
+//  }
+//}
+
+async function currentlyReading() {
+  const currentGrid = document.querySelector(".CurrentGrid")
+  const token = JSON.parse(localStorage.getItem("token"));
+  const id = token.user_id
+  const response = await fetch(`http://localhost:3000/books`);
+  console.log(response)
+  if (response.status === 200) {
+     const books = await response.json();
+     const filteredBooks = books.filter((book) => book.user_id == id);
+     filteredBooks.forEach((book) => {
+        const imgWrapper = document.createElement("div")
+        imgWrapper.classList.add("img_wrapper")
+        currentGrid.appendChild(imgWrapper)
+        const bookImage = document.createElement("img");
+        bookImage.src = book.book_cover;
+        bookImage.alt = book.title;
+        bookImage.id = "borrowedBook";
+        bookImage.classList.add("reading");
+        
+        bookImage.addEventListener('click', openBook);
+        imgWrapper.appendChild(bookImage);
+     })}
+     else {
+      console.log("hi")
+      const noBooks = document.createElement("h2");
+      noBooks.innerHTML = "No currently borrowed books"
+      currentGrid.appendChild(noBooks)
+     }
+
 }
 
 getUserInfo();
+currentlyReading();
+
+function openBook(e) {
+ const title =  e.target.alt;
+ localStorage.setItem("title", title);
+ window.location.assign("book.html");
+}
