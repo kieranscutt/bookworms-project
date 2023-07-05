@@ -106,9 +106,9 @@ borrowBtn.addEventListener("click", borrowBook);
 
 // Borrow function
 async function borrowBook(user_id) {
-  console.log("The first check");
+  console.log("The first check"); // to remove later
   const storedTitle = localStorage.getItem("title");
-  console.log("the second one");
+  console.log("the second one"); // to remove later
 
   console.log("Stored Title:", storedTitle); // to remove later
 
