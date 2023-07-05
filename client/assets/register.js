@@ -1,4 +1,4 @@
-localStorage.removeItem("title");
+localStorage.clear();
 document
   .getElementById("register-form")
   .addEventListener("submit", async (e) => {
