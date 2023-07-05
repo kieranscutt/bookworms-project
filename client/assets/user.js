@@ -68,7 +68,6 @@ async function getUserInfo() {
   letterRef.innerHTML = data.first_name[0].toUpperCase();
 }
 
-
 async function currentlyReading() {
   const currentGrid = document.querySelector(".CurrentGrid");
   const token = JSON.parse(localStorage.getItem("token"));
@@ -91,12 +90,11 @@ async function currentlyReading() {
       imgWrapper.appendChild(bookImage);
 
       const returnBtn = document.createElement("input");
-      returnBtn.value = "return"
-      returnBtn.type = "button"
-      returnBtn.id = "returnBtn"
-      imgWrapper.appendChild(returnBtn)
-      returnBtn.addEventListener("click", returnBook )
-
+      returnBtn.value = "return";
+      returnBtn.type = "button";
+      returnBtn.id = "returnBtn";
+      imgWrapper.appendChild(returnBtn);
+      returnBtn.addEventListener("click", returnBook);
     });
   } else {
     window.location.assign("login.html");
@@ -117,9 +115,8 @@ function openBook(e) {
 
 async function returnBook(e) {
   const title = e.target.parentElement.querySelector("img").alt;
-  console.log(title)
   e.target.parentElement.remove();
-  
+
   const data = {
     user_id: null,
     borrow_date: null,
