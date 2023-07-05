@@ -23,7 +23,6 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
     localStorage.setItem("token", JSON.stringify(data.token));
     window.location.assign("index.html");
     const token = JSON.parse(localStorage.getItem("token"));
-    console.log(token);
   } else {
     alert(data.error);
   }
