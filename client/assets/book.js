@@ -109,7 +109,6 @@ borrowBtn.addEventListener("click", borrowBook);
 // Borrow function
 async function borrowBook() {
   const title = titleElement.innerText.toLowerCase();
-  console.log(title);
 
   const currentDate = new Date();
   const borrowDate = currentDate.toLocaleDateString("en-GB");
@@ -135,7 +134,6 @@ async function borrowBook() {
       `http://localhost:3000/books/${title}`,
       options
     );
-    console.log(response);
     if (response.status == 200) {
       const newResponse = response.json();
       alert(`Book borrowed successfully!`);
