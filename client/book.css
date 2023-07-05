@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -8,6 +10,9 @@
 
 html,
 body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   font-family: "Rubik", sans-serif;
   height: 100%;
   width: 100%;
@@ -18,59 +23,115 @@ body {
   display: flex;
   gap: 20px;
   width: 90vw;
-  margin: 50px;
+  height: 700px;
   align-items: center;
+}
+
+h1 {
+  font-size: 40px;
+  margin: 10px;
+}
+
+h2 {
+  font-size: 26px;
+  margin: 10px;
+  font-weight: 300;
+}
+
+h3 {
+  font-size: 22px;
+  margin: 10px;
+  font-weight: 200;
 }
 
 #book-cover {
   border-radius: 2px;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
   flex: 0 0 auto;
-  max-height: 350px;
+  height: 400px;
+  transition: transform 0.3s ease;
+}
+
+#book-cover:hover {
+  transform: scale(1.05);
 }
 
 .book-info {
   display: flex;
   flex-direction: column;
-  border: 2px solid;
+  border: none;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
-  background-color: #6096b4;
+  background-color: #230404;
+  color: bisque;
 }
 
 .borrow-container {
+  position: absolute;
+  width: 600px;
+  top: 680px;
+  right: 75px;
   display: flex;
   justify-content: center;
+}
+
+@keyframes buttonAnimation {
+  0% {
+    transform: translateY(0);
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
+  }
+  50% {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 12px rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    transform: translateY(0);
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
+  }
 }
 
 #borrow-btn {
   width: 50vw;
   height: 63px;
-  background-color: #6096b4;
+  background-color: #230404;
   border: none;
   font-size: 32px;
   font-weight: bold;
-  color: #eee9da;
+  color: bisque;
   border-radius: 8px;
-  top: 60px;
   box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
+  cursor: pointer;
 }
 
-input[type="submit"]:hover {
-  scale: 0.95;
+#borrow-btn:hover {
+  scale: 1.05;
+  animation: buttonAnimation 1s infinite;
 }
 
 nav {
   display: flex;
+  justify-content: space-between;
+  width: 100%;
   align-items: center;
   padding: 30px;
   height: 94px;
-  background-color: #6096b4;
+  background-color: #230404;
+  color: #eee9da;
 }
 
-#hamburger {
-  font-size: 62px;
+.icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#hamburger::before {
+  content: "\f0c9"; /* Default hamburger icon */
+  font-family: "Font Awesome 5 Free"; /* FontAwesome font family */
+  font-weight: 900; /* FontAwesome font weight */
+  transition: transform 0.3s ease; /* Transition for animation */
+  font-size: 40px;
   cursor: pointer;
 }
 
@@ -78,8 +139,13 @@ nav {
   transform: scale(105%);
 }
 
+#hamburger.active::before {
+  content: "\f00d"; /* Icon when the hamburger is active/clicked */
+  font-size: 46.5px;
+}
+
 #user-icon {
-  font-size: 52px;
+  font-size: 45px;
   cursor: pointer;
   margin-left: 29px;
 }
@@ -90,7 +156,7 @@ nav {
 
 #logo {
   font-size: 48px;
-  font-weight: 400;
+  font-weight: 700;
   cursor: pointer;
   margin-left: 394px;
 }
@@ -98,7 +164,7 @@ nav {
 #search-form {
   width: 400px;
   height: 60px;
-  margin-left: 214px;
+  /* margin-left: 214px; */
   display: flex;
   background-color: #eee9da;
   border-radius: 10px;
@@ -113,14 +179,15 @@ nav {
   border-radius: 10px;
   outline: none;
   border: none;
+  padding: 0 10px;
 }
 
 #search-button {
   position: relative;
   height: 100%;
-  width: 100%;
+  width: 60px;
   border: none;
-  margin-left: 10px;
+  margin-left: 40px;
   background-color: #eee9da;
   display: flex;
   cursor: pointer;
@@ -139,7 +206,7 @@ li {
 
 li a {
   text-decoration: none;
-  color: black;
+  color: bisque;
   font-size: 1rem;
 }
 
@@ -153,7 +220,7 @@ a:hover {
   margin-left: 0px;
   height: 0;
   width: 300px;
-  background-color: #6096b4;
+  background-color: #230404;
   transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   overflow: hidden;
   z-index: 5;
@@ -163,7 +230,7 @@ a:hover {
 .burger-menu.open {
   height: 130px;
   width: 300px;
-  border: solid #6096b4 2px;
+  border: solid #230404 2px;
 }
 
 .burger-menu li {

@@ -26,6 +26,7 @@ if (localStorage.getItem("token") == undefined) {
 
 function openBurger() {
   burgerMenu.classList.toggle("open");
+  hamburger.classList.toggle("active");
 }
 
 async function displayStoredBook() {
