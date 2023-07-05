@@ -25,6 +25,9 @@ trendingBooks.forEach((book) =>
 );
 genreBooks.forEach((book) => book.addEventListener("click", openGenreBook));
 
+if (localStorage.getItem("token") == undefined) {
+  window.location.assign("login.html");
+}
 localStorage.removeItem("title");
 
 function openBurger() {
@@ -50,7 +53,7 @@ async function loadBooks() {
       trendingBooks[books.indexOf(book)].alt = book.title;
     });
   } else {
-    window.location.assign("./index.html");
+    window.location.assign("./login.html");
   }
 }
 
