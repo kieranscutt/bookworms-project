@@ -35,7 +35,6 @@ async function displayStoredBook() {
     `http://localhost:3000/books/${storedTitle}`,
     options
   );
-  console.log(response);
   if (response.status == 200) {
     const storedBook = await response.json();
     bookCover.src = storedBook.book_cover;
@@ -100,12 +99,16 @@ function clearBookDetails() {
   descriptionElement.textContent = "";
 }
 
+const token = JSON.parse(localStorage.getItem("token"));
+const user_id = token.user_id;
+
 //
 const borrowBtn = document.getElementById("borrow-btn");
 borrowBtn.addEventListener("click", borrowBook);
 //
 
 // Borrow function
+<<<<<<< HEAD
 // async function borrowBook(token) {
 //   const title = titleElement.innerText;
 
@@ -156,12 +159,16 @@ borrowBtn.addEventListener("click", borrowBook);
 
 async function borrowBook(token) {
   const titleElement = document.getElementById("title");
+=======
+async function borrowBook() {
+>>>>>>> 4140952a448beecee56c37a5a238b53e1a943d60
   const title = titleElement.innerText.toLowerCase();
   console.log(title);
 
   const currentDate = new Date();
   const borrowDate = currentDate.toLocaleDateString("en-GB");
 
+<<<<<<< HEAD
   console.log(borrowDate);
 
   const returnDate = new Date(currentDate);
@@ -169,22 +176,36 @@ async function borrowBook(token) {
   const formattedReturnDate = returnDate.toLocaleDateString("en-GB");
   console.log("return date:", formattedReturnDate);
 
+=======
+  const returnDate = new Date(currentDate);
+  returnDate.setDate(returnDate.getDate() + 14);
+  const formattedReturnDate = returnDate.toLocaleDateString("en-GB");
+  const data = {
+    user_id: user_id,
+    borrow_date: borrowDate.toString(),
+    return_date: formattedReturnDate.toString(),
+  };
+>>>>>>> 4140952a448beecee56c37a5a238b53e1a943d60
   const options = {
     method: "PATCH",
     headers: {
       Authorization: token,
       "Content-Type": "application/json",
     },
+<<<<<<< HEAD
     body: JSON.stringify({
       user_id: null, // Replace with the appropriate user ID
       borrow_date: borrowDate,
       return_date: formattedReturnDate,
       title: title,
     }),
+=======
+    body: JSON.stringify(data),
+>>>>>>> 4140952a448beecee56c37a5a238b53e1a943d60
   };
-
   try {
     const response = await fetch(
+<<<<<<< HEAD
       `http://localhost:3000/books/${encodeURI(title)}`,
       options
     );
@@ -192,9 +213,18 @@ async function borrowBook(token) {
     if (response.status === 200) {
       alert(`Book borrowed successfully!`);
       // The book must be returned on ${formattedReturnDate}
+=======
+      `http://localhost:3000/books/${title}`,
+      options
+    );
+    console.log(response);
+    if (response.status == 200) {
+      const newResponse = response.json();
+      alert(`Book borrowed successfully!`);
+      // \nThe book must be returned on ${returnDate} // to implement later
+>>>>>>> 4140952a448beecee56c37a5a238b53e1a943d60
     } else {
-      const errorData = await response.json();
-      alert(`Book borrowing failed: ${errorData.message}`);
+      alert(`Book borrowing failed.`);
     }
   } catch (error) {
     console.error("Error borrowing book:", error);
