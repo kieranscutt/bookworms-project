@@ -76,6 +76,7 @@ async function formSubmission(event) {
 
         if (foundBook) {
           displayBook(foundBook);
+          searchInput.value = "";
         } else {
           clearBookDetails();
         }
@@ -102,6 +103,7 @@ function clearBookDetails() {
   authorElement.textContent = "";
   genreElement.textContent = "";
   descriptionElement.textContent = "";
+  searchInput.value = "";
 }
 
 const token = JSON.parse(localStorage.getItem("token"));
@@ -142,17 +144,30 @@ async function borrowBook() {
     console.log(response);
     if (response.status === 200) {
       const newResponse = response.json();
-      alert(
-        `Book borrowed successfully!\nThe book must be returned on ${formattedReturnDate}`
+      displayPopup(
+        "Book borrowed successfully!\nThe book must be returned on " +
+          formattedReturnDate
       );
       borrowBtn.value = "You are borrowing this book";
       borrowBtn.disabled = true;
     } else {
-      alert(`Book borrowing failed.`);
+      displayPopup("Book borrowing failed.");
     }
   } catch (error) {
     console.error("Error borrowing book:", error);
   }
+}
+function displayPopup(message) {
+  const popupContainer = document.getElementById("popup-container");
+  const popupMessage = document.getElementById("popup-message");
+  const popupClose = document.getElementById("popup-close");
+
+  popupMessage.textContent = message;
+  popupContainer.style.display = "block";
+
+  popupClose.addEventListener("click", () => {
+    popupContainer.style.display = "none";
+  });
 }
 
 async function isBorrowed() {
