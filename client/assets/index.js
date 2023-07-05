@@ -22,6 +22,8 @@ trendingBooks.forEach((book) =>
 );
 genreBooks.forEach((book) => book.addEventListener("click", openGenreBook));
 
+localStorage.removeItem("title");
+
 function openBurger() {
   burgerMenu.classList.toggle("open");
 }

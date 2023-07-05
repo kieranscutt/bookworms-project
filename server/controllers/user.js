@@ -58,4 +58,14 @@ async function update(req, res) {
   }
 }
 
-module.exports = { register, login, destroy, update };
+async function show(req, res) {
+  try {
+    const id = parseInt(req.params.id);
+    const user = await User.getOneById(id);
+    res.json(user);
+  } catch (err) {
+    res.status(404).send({ error: err.message });
+  }
+}
+
+module.exports = { register, login, destroy, update, show };

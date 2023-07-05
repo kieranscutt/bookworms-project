@@ -1,3 +1,5 @@
+const token = require('./login')
+
 const nameRef = document.querySelector(".name__input");
 const emailRef = document.querySelector(".email__input");
 const letterRef = document.querySelector(".profile__letter");
@@ -10,18 +12,20 @@ const userIcon = document.querySelector("#user-icon");
 
 hamburger.addEventListener("click", openBurger);
 userIcon.addEventListener("click", () => {
-  localStorage.removeItem("title");
   window.location.assign("./user.html");
 });
 
 logo.addEventListener("click", () => {
   window.location.assign("index.html");
-  localStorage.removeItem("title");
 });
+
+localStorage.removeItem("title");
 
 function openBurger() {
   burgerMenu.classList.toggle("open");
 }
+
+//token = {token_id: 7, user_id: 3, token: '07cff7b3-0f0a-4382-b035-58e244061e1d'}
 
 async function emailInput() {
   const response = await fetch("http://localhost:3000/users/email");
