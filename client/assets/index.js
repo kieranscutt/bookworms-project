@@ -8,12 +8,15 @@ const trendingBooks = document.querySelectorAll("#trendingBook");
 const genreBooks = document.querySelectorAll("#genreBook");
 const genreLinks = document.querySelectorAll("#genreLink");
 const genreGrid = document.querySelector(".genreGrid");
+const searchForm = document.getElementById("search-form");
+const searchInput = document.getElementById("searchbar");
 
 hamburger.addEventListener("click", openBurger);
 genreButton.addEventListener("click", openGenre);
 userIcon.addEventListener("click", () => {
   window.location.assign("./user.html");
 });
+searchForm.addEventListener("submit", formSubmission);
 
 genreLinks.forEach((link) => link.addEventListener("click", loadGenreBooks));
 window.addEventListener("load", loadBooks);
@@ -22,6 +25,9 @@ trendingBooks.forEach((book) =>
 );
 genreBooks.forEach((book) => book.addEventListener("click", openGenreBook));
 
+if (localStorage.getItem("token") == undefined) {
+  window.location.assign("login.html");
+}
 localStorage.removeItem("title");
 
 function openBurger() {
@@ -39,7 +45,7 @@ async function loadBooks() {
     },
   };
   const response = await fetch("http://localhost:3000/books", options);
-  console.log(response)
+  console.log(response);
   if (response.status === 200) {
     const books = await response.json();
     books.forEach((book) => {
@@ -47,7 +53,35 @@ async function loadBooks() {
       trendingBooks[books.indexOf(book)].alt = book.title;
     });
   } else {
-    window.location.assign("./index.html");
+    window.location.assign("./login.html");
+  }
+}
+
+async function formSubmission(event) {
+  event.preventDefault();
+
+  const searchBook = searchInput.value.trim();
+
+  if (searchBook !== "") {
+    await fetch(`http://localhost:3000/books/`)
+      .then((response) => response.json())
+      .then((data) => {
+        const foundBook = data.find((book) =>
+          book.title.toLowerCase().includes(searchBook.toLowerCase())
+        );
+
+        if (foundBook) {
+          localStorage.setItem("title", foundBook.title);
+          window.location.assign("book.html");
+        } else {
+          throw new Error("Cannot find book");
+        }
+      })
+      .catch((error) => {
+        console.error("Error searching for books:", error);
+      });
+  } else {
+    throw new Error("Search field is empty");
   }
 }
 
