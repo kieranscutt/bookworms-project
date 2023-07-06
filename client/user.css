@@ -271,23 +271,23 @@ a:hover {
   width: 120px;
   padding: 2px;
   color: #ffffff;
-  border: 2px solid #dfd7bf;
+  border: 1px solid bisque;
   font-size: 18px;
   background-color: #230404;
-  border-radius: 5px;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.7);
   transition: all 300ms ease;
   transition: 0.5s;
   margin-bottom: 10px;
+  border-radius: 2px;
 }
 
 #returnBtn:hover {
-  scale: 1.1;
   cursor: pointer;
-  background-color: #dfd7bf;
+  background-color: bisque;
   color: #230404;
-  border-radius: 5px;
-  box-shadow: 0 0 5px #dfd7bf
+  box-shadow: 0 0 5px bisque;
+  border: 1px solid #230404;
+  border-radius: 2px;
 }
 
 #popup-container {
