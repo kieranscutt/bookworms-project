@@ -1,12 +1,34 @@
 # Bookworms
 
-## Project description
+## About our App
 
-A website with 4 games; "Hangman Countries and Capitals", "Hangman Italian nouns", "Guess who English Kings and Queens" and "Translating race Italian nouns". Currently, only "Hangman Countries and Capitals" has been implemented.
-The game is hidden underneath the main page which can be entered by clicking the red curving square in the upper left.
+Welcome to the enchanting Florin Library!
 
-The point of these games is to increase interest in NON-STEM subjects in secondary schools.
-This project was requested by the management team of the Hive group of secondary schools.
+Here in the beautiful Florin county, we have made sure that our residents have the marvelous opportunity to access the library online and always have a delightful array of books to choose from!
+
+The library in Floring County has faced decreased staffing levels and is facing closure, at the point in which more people would like to use the library's services. In order to tackle this, we decided to make a website that will take some of the load off of the library staff. Library users can now borrow books and return books using the website, without needing the staff to help. Library users can also search a book on the website to check if it is available or not, and when it is due to be returned, also taking load off of the staff.
+
+As you may already know, books bring forth a myriad of splendid benefits, including:
+
+    - Knowledge and Learning: Books serve as splendid vessels of wisdom and knowledge, allowing us to explore a vast array of captivating information and acquire new insights.
+
+    - Mental Stimulation: When we immerse ourselves in the captivating world of books, our minds are invigorated and stimulated, enhancing our cognitive abilities and sharpening our intellectual prowess.
+
+    - Imagination and Creativity: The pages of books hold boundless realms of imagination, whisking us away to extraordinary worlds, bygone eras, and intriguing perspectives. They ignite the flames of creativity within us, encouraging us to paint vivid pictures in our minds.
+
+    - Emotional Development: Books possess the remarkable power to stir a multitude of emotions deep within our hearts. They make us giggle with glee, shed tears of both joy and sorrow, empathize with characters, and forge profound connections to their journeys.
+
+    - Relaxation and Stress Reduction: Amidst the hustle and bustle of life, books offer a splendid sanctuary for tranquility and peace. They serve as a balm for our souls, providing respite from the stresses of everyday life and granting us a serene escape.
+
+    - Language and Communication Skills: Within the pages of books lie the keys to unlocking the beauty of language. By immersing ourselves in well-crafted sentences, eloquent phrases, and diverse writing styles, we enhance our vocabulary, grammar, and overall communication skills.
+
+    - Expanded Perspectives: Books act as marvelous gateways to diverse cultures, varied perspectives, and captivating experiences. They invite us to embark on journeys of understanding, broadening our horizons and nurturing open-mindedness.
+
+    - Lifelong Companion: Books are extraordinary companions that accompany us throughout our lives, through the wondrous chapters of our personal journeys. They offer solace, camaraderie, and intellectual stimulation, remaining steadfast through the ever-changing tides of time.
+
+By following these steps, you can make the most of our library's offerings and easily find the books that capture your interest.
+
+Here at Florin Library, we celebrate the transformative power of books and invite you to embark on delightful literary adventures that will enrich your mind, touch your heart, and transport you to extraordinary realms. Happy reading!
 
 ## Installation & Usage
 
@@ -111,31 +133,3 @@ There are no known bugs. However, some of the elements have not yet been impleme
 ## Future features
 
 In the future we would add a previously read books column to the user database, which would allow us to display books that a user has read and returned. We would also implement a reviewing system in which people can review, and rate a book out of 5. We would also allow for admin accounts to be setup which can add or remove books to the library's content.
-
-## About our App
-
-Welcome to the enchanting Florin Library!
-
-Here in the beautiful Florin Council county, we have made sure that our residents have the marvelous opportunity to access the library online and always have a delightful array of books to choose from!
-
-As you may already know, books bring forth a myriad of splendid benefits, including:
-
-    - Knowledge and Learning: Books serve as splendid vessels of wisdom and knowledge, allowing us to explore a vast array of captivating information and acquire new insights.
-
-    - Mental Stimulation: When we immerse ourselves in the captivating world of books, our minds are invigorated and stimulated, enhancing our cognitive abilities and sharpening our intellectual prowess.
-
-    - Imagination and Creativity: The pages of books hold boundless realms of imagination, whisking us away to extraordinary worlds, bygone eras, and intriguing perspectives. They ignite the flames of creativity within us, encouraging us to paint vivid pictures in our minds.
-
-    - Emotional Development: Books possess the remarkable power to stir a multitude of emotions deep within our hearts. They make us giggle with glee, shed tears of both joy and sorrow, empathize with characters, and forge profound connections to their journeys.
-
-    - Relaxation and Stress Reduction: Amidst the hustle and bustle of life, books offer a splendid sanctuary for tranquility and peace. They serve as a balm for our souls, providing respite from the stresses of everyday life and granting us a serene escape.
-
-    - Language and Communication Skills: Within the pages of books lie the keys to unlocking the beauty of language. By immersing ourselves in well-crafted sentences, eloquent phrases, and diverse writing styles, we enhance our vocabulary, grammar, and overall communication skills.
-
-    - Expanded Perspectives: Books act as marvelous gateways to diverse cultures, varied perspectives, and captivating experiences. They invite us to embark on journeys of understanding, broadening our horizons and nurturing open-mindedness.
-
-    - Lifelong Companion: Books are extraordinary companions that accompany us throughout our lives, through the wondrous chapters of our personal journeys. They offer solace, camaraderie, and intellectual stimulation, remaining steadfast through the ever-changing tides of time.
-
-By following these steps, you can make the most of our library's offerings and easily find the books that capture your interest.
-
-Here at Florin Library, we celebrate the transformative power of books and invite you to embark on delightful literary adventures that will enrich your mind, touch your heart, and transport you to extraordinary realms. Happy reading!
