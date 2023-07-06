@@ -8,6 +8,7 @@ describe("users endpoints", () => {
   let api;
 
   beforeEach(async () => {
+    await destroyDbEnv();
     await createDbEnv();
     await populateDbEnv();
   });

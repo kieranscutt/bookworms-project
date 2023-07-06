@@ -6,7 +6,7 @@
   "scripts": {
     "unitTests": "jest --testPathPattern=/unit/ --watchAll --verbose",
     "coverage": "jest --testPathPattern=/unit/ --coverage",
-    "test": "jest --setupFiles ./__tests__/db/config.js --watchAll --detectOpenHandles --runInBand --verbose",
+    "test": "jest --setupFiles ./__tests__/db/config.js --watchAll --detectOpenHandles --verbose",
     "setup-db": "node ./database/setup.js",
     "dev": "nodemon -L ./index.js"
   },
@@ -16,7 +16,7 @@
       "/node_modules/"
     ],
     "testPathIgnorePatterns": [
-      "./node_modules/"
+      "/__tests__/db/config.js"
     ]
   },
   "keywords": [],
