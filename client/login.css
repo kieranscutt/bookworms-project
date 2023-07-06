@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 * {
   padding: 0;
@@ -23,50 +23,50 @@ body {
 }
 
 .login-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 600px;
-  height: 400px;
-  padding: 40px;
-  transform: translate(-50%, -50%);
-  background-color: #230404;
-  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
-  border-radius: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 400px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background-color: #230404ea;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
 }
 
 .login-box h1 {
-  margin: 0 0 30px;
-  padding: 0;
-  color: bisque;
-  text-align: center;
+    margin: 0 0 30px;
+    padding: 0;
+    color: bisque;
+    text-align: center;
 }
 
 .login-box .user-box {
-  position: relative;
+    position: relative;
 }
 
 .login-box .user-box input {
-  width: 100%;
-  padding: 10px 0;
-  font-size: 16px;
-  color: bisque;
-  margin-bottom: 30px;
-  border: none;
-  border-bottom: 1px solid bisque;
-  outline: none;
-  background: transparent;
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: bisque;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid bisque;
+    outline: none;
+    background: transparent;
 }
 
 .login-box .user-box label {
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 10px 0;
-  font-size: 16px;
-  color: bisque;
-  pointer-events: none;
-  transition: 0.5s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: bisque;
+    pointer-events: none;
+    transition: .5s;
 }
 
 .login-box .user-box input:focus~label
@@ -83,25 +83,21 @@ body {
 
 #login-btn {
     position: relative;
-  display: inline-block;
-  padding: 10px 20px;
-  /* background-color: #6030b1; */
-  background-color: bisque;
-  color: #230404;
-  border-radius: 50px;
-  border: none;
-  transition: all 300ms ease;
-  font-size: 16px;
-  text-align: center;
-  text-decoration: none;
-  text-transform: uppercase;
-  overflow: hidden;
-  transition: 0.5s;
-  margin-top: 40px;
-  margin-bottom: 30px;
-  letter-spacing: 4px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #6030b1;
+    color: white;
+    border-radius: 50px;
+    transition: all 300ms ease;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    letter-spacing: 4px;
 }
-
 
 #login-btn:hover {
   background-color: #03e9f4;
@@ -110,6 +106,55 @@ body {
   box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
     0 0 100px #03e9f4;
 }
+
+/*.button--ujarak {
+	-webkit-transition: border-color 0.4s, color 0.4s;
+	transition: border-color 0.4s, color 0.4s;
+}
+.button--ujarak::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #37474f;
+	z-index: -1;
+	opacity: 0;
+	-webkit-transform: scale3d(0.7, 1, 1);
+	transform: scale3d(0.7, 1, 1);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+	transition: transform 0.4s, opacity 0.4s;
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--ujarak.button--round-s::before {
+	border-radius: 2px;
+}
+.button--ujarak.button--inverted::before {
+	background: #7986CB;
+}
+.button--ujarak,
+.button--ujarak::before {
+	-webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+	transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+}
+.button--ujarak:hover {
+	color: #fff;
+	border-color: #37474f;
+}
+.button--ujarak.button--inverted:hover {
+	color: #37474F;
+	border-color: #fff;
+}
+.button--ujarak:hover::before {
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+*/
+
+
 
 .container {
   overflow: hidden;

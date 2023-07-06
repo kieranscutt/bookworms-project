@@ -86,6 +86,13 @@ async function currentlyReading() {
       bookImage.id = "borrowedBook";
       bookImage.classList.add("reading");
 
+      //due date
+      //when currently reading books loaded, for each book,
+      // create element h3, innerHtml= book.return_date
+      const dueDate = document.createElement("h3");
+      dueDate.innerHTML = "Due: " + book.return_date;
+      imgWrapper.appendChild(dueDate);
+
       bookImage.addEventListener("click", openBook);
       imgWrapper.appendChild(bookImage);
 
@@ -115,7 +122,7 @@ function openBook(e) {
 
 async function returnBook(e) {
   const title = e.target.parentElement.querySelector("img").alt;
-  e.target.parentElement.remove();
+  const bookElement = e.target.parentElement;
 
   const data = {
     user_id: null,
@@ -138,11 +145,48 @@ async function returnBook(e) {
     if (response.status == 200) {
       const responseData = await response.json();
       alert(`Book returned successfully!`);
-      // \nThe book must be returned on ${returnDate} // to implement later
+
+      const previousGrid = document.querySelector(".previousGrid");
+      const currentGrid = document.querySelector(".CurrentGrid");
+
+      currentGrid.removeChild(bookElement);
+
+      const imgWrapper = document.createElement("div");
+      imgWrapper.classList.add("img_wrapper");
+      previousGrid.appendChild(imgWrapper);
+      const bookImage = document.createElement("img");
+      bookImage.src = responseData.book_cover;
+      bookImage.alt = responseData.title;
+      bookImage.id = "borrowedBook";
+      bookImage.classList.add("reading");
+      imgWrapper.appendChild(bookImage);
+
+      bookImage.addEventListener("click", openBook);
+
+      console.log("Book moved to Previous Books:", responseData.title);
+
+      if (currentGrid.children.length === 0) {
+        const noBooks = document.createElement("h2");
+        noBooks.innerHTML = "No currently borrowed books";
+        currentGrid.appendChild(noBooks);
+      }
     } else {
-      alert(`Book return failed.`);
+      displayPopup(`Book return failed.`);
     }
   } catch (error) {
     console.error("Error returning book:", error);
   }
+}
+
+function displayPopup(message) {
+  const popupContainer = document.getElementById("popup-container");
+  const popupMessage = document.getElementById("popup-message");
+  const popupClose = document.getElementById("popup-close");
+
+  popupMessage.textContent = message;
+  popupContainer.style.display = "block";
+
+  popupClose.addEventListener("click", () => {
+    popupContainer.style.display = "none";
+  });
 }

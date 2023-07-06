@@ -3,7 +3,7 @@ const Book = require("../models/Book");
 async function index(req, res) {
   try {
     const books = await Book.getAll();
-    res.json(books);
+    res.status(200).json(books);
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
@@ -13,7 +13,7 @@ async function show(req, res) {
   try {
     const title = req.params.name.toLowerCase();
     const book = await Book.getOneByTitle(title);
-    res.json(book);
+    res.status(200).json(book);
   } catch (err) {
     res.status(404).json({ error: err.message });
   }
