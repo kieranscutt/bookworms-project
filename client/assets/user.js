@@ -87,15 +87,14 @@ async function currentlyReading() {
       bookImage.classList.add("reading");
 
       //due date
-//when currently reading books loaded, for each book,
-// create element h3, innerHtml= book.return_date
+      //when currently reading books loaded, for each book,
+      // create element h3, innerHtml= book.return_date
       const dueDate = document.createElement("h3");
-      dueDate.innerHTML = "Due: " + book.return_date
+      dueDate.innerHTML = "Due: " + book.return_date;
       imgWrapper.appendChild(dueDate);
 
       bookImage.addEventListener("click", openBook);
       imgWrapper.appendChild(bookImage);
-      
 
       const returnBtn = document.createElement("input");
       returnBtn.value = "return";
@@ -167,5 +166,3 @@ function displayPopup(message) {
     popupContainer.style.display = "none";
   });
 }
-
-
