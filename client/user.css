@@ -257,10 +257,9 @@ a:hover {
 }
 
 .trendingBooksTitle {
-  font-size: 48px;
+  font-size: 38px;
   font-weight: 400;
-  margin-left: 105px;
-  margin-bottom: 49px;
+  margin-bottom: 29px;
 }
 
 .prtitleLine {
@@ -285,11 +284,10 @@ a:hover {
 #returnBtn:hover {
   scale: 1.1;
   cursor: pointer;
-  background-color: #03e9f4;
-  color: #fff;
+  background-color: #dfd7bf;
+  color: #230404;
   border-radius: 5px;
-  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
-    0 0 100px #03e9f4;
+  box-shadow: 0 0 5px #dfd7bf
 }
 
 #popup-container {
@@ -350,3 +348,4 @@ a:hover {
 h3 {
   text-align: center;
 }
+

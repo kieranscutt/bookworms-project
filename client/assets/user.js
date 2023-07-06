@@ -144,7 +144,7 @@ async function returnBook(e) {
     );
     if (response.status == 200) {
       const responseData = await response.json();
-      alert(`Book returned successfully!`);
+      displayPopup(`Book returned successfully!`);
 
       const previousGrid = document.querySelector(".previousGrid");
       const currentGrid = document.querySelector(".CurrentGrid");
