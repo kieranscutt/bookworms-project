@@ -31,13 +31,13 @@ VALUES
     ('The Girl with the Dragon Tattoo', 
     'Stieg Larsson', 
     'Thriller',  
-    'In this gripping thriller, a journalist named Mikael Blomkvist finds himself embroiled in a decades-old mystery when he is hired to investigate the disappearance of Harriet Vanger, a member of a powerful Swedish family. With the help of the enigmatic computer hacker Lisbeth Salander, Blomkvist delves deep into the dark secrets of the Vanger family and uncovers a web of corruption, violence, and intrigue. As they unravel the truth, they become entangled in a dangerous game that threatens their lives. This thrilling novel takes readers on a captivating journey through the twisted paths of a cold case investigation, exploring themes of family secrets, power dynamics, and the indomitable strength of the human spirit.',
+    'In this gripping thriller, journalist Mikael Blomkvist is hired to investigate the disappearance of Harriet Vanger, a member of a powerful Swedish family. With the help of enigmatic hacker Lisbeth Salander, they uncover a web of corruption, violence, and intrigue. As they delve into the dark secrets of the Vanger family, they become entangled in a dangerous game that threatens their lives. This captivating journey through a cold case investigation explores family secrets, power dynamics, and the indomitable strength of the human spirit. Stieg Larsson''s thrilling novel keeps readers hooked with its twisted paths and themes of deception and resilience.',
     'https://covers.openlibrary.org/b/id/13670530-L.jpg'),
     
     ('The Da Vinci Code', 
     'Dan Brown', 
     'Thriller', 
-    'In this pulse-pounding thriller, renowned symbologist Robert Langdon finds himself caught in a high-stakes race against time. When a curator is murdered at the Louvre, Langdon becomes the prime suspect and embarks on a perilous journey to unravel a hidden message left by the curator before his death. Joined by cryptologist Sophie Neveu, Langdon discovers a trail of clues that leads them to uncover a shocking religious conspiracy that has been protected for centuries. As they navigate through art, symbols, and historical mysteries, they must stay one step ahead of a powerful and secretive organization that will stop at nothing to protect their secrets. With relentless suspense and captivating plot twists, ''The Da Vinci Code'' keeps readers on the edge of their seats until the final revelation.', 
+    'In this pulse-pounding thriller, renowned symbologist Robert Langdon becomes the prime suspect in a curator''s murder at the Louvre. He embarks on a perilous journey, accompanied by cryptologist Sophie Neveu, to unravel a hidden message left by the curator before his death. Their investigation leads them through art, symbols, and historical mysteries, exposing a shocking religious conspiracy protected for centuries. As they navigate a dangerous game with a powerful and secretive organization, Langdon and Neveu must stay one step ahead to protect their lives. With relentless suspense and captivating plot twists, this gripping thriller keeps readers on the edge of their seats.', 
     'https://covers.openlibrary.org/b/id/10660552-L.jpg'),
 
     ('The Silent Patient', 
@@ -49,7 +49,7 @@ VALUES
     ('Gone Baby Gone', 
     'Dennis Lehane', 
     'Thriller', 
-    'In the gritty streets of Boston''s seedy underworld, two private investigators, Patrick Kenzie and Angela Gennaro, are hired to find a missing four-year-old girl named Amanda McCready. As they delve deeper into the case, they uncover a labyrinth of corruption, moral dilemmas, and shocking revelations that lead them to question their own motives and the true meaning of justice. "Gone Baby Gone" is a gripping and morally complex thriller that explores themes of child abduction, societal decay, and the blurred lines between right and wrong. Lehane\''s masterful storytelling keeps readers hooked until the heart-wrenching conclusion.', 
+    'In the gritty streets of Boston''s seedy underworld, private investigators Patrick Kenzie and Angela Gennaro are hired to find a missing four-year-old girl named Amanda McCready. As they dig deeper into the case, they uncover a labyrinth of corruption, moral dilemmas, and shocking revelations that force them to question their own motives and the true meaning of justice. In "Gone Baby Gone," Dennis Lehane delivers a gripping and morally complex thriller that explores the themes of child abduction, societal decay, and the blurred lines between right and wrong. With masterful storytelling, Lehane keeps readers hooked until the heart-wrenching conclusion.', 
     'https://covers.openlibrary.org/b/id/431857-L.jpg'),
 
     ('The Girl Before', 
@@ -61,19 +61,19 @@ VALUES
     ('The Woman in the Window', 
     'A.J. Finn', 
     'Thriller', 
-    'Anna Fox, an agoraphobic woman, spends her days confined to her New York City apartment, observing her neighbors through her camera lens. When she witnesses a crime in her neighbor\''s house, she becomes entangled in a dangerous web of secrets and deception. As Anna struggles to convince ot5hers of what she saw, she begins to question her own sanity. "The Woman in the Window" is a gripping psychological thriller that explores themes of perception, paranoia, and the blurred line between reality and imagination. With its atmospheric setting and unexpected twists, this novel keeps readers guessing until the final pages.', 
+    'Anna Fox, an agoraphobic woman, spends her days confined to her New York City apartment, observing her neighbors through her camera lens. When she witnesses a crime in her neighbor''s house, she becomes entangled in a dangerous web of secrets and deception. As Anna struggles to convince ot5hers of what she saw, she begins to question her own sanity. "The Woman in the Window" is a gripping psychological thriller that explores themes of perception, paranoia, and the blurred line between reality and imagination. With its atmospheric setting and unexpected twists, this novel keeps readers guessing until the final pages.', 
     'https://covers.openlibrary.org/b/id/12379672-L.jpg'),
 
     ('The Couple Next Door', 
     'Shari Lapena', 
     'Thriller', 
-    'In this riveting Thriller, Anne and Marco Conti attend a dinner party at their neighbor\''s house, leaving their infant daughter at home. When they return, they discover that their baby is missing, setting off a frantic search for answers. As secrets and betrayals are exposed, Anne and Marco find themselves questioning everything they thought they knew about their neighbors, their marriage, and their own pasts. "The Couple Next Door" is a fast-paced and suspenseful novel that explores themes of trust, guilt, and the lengths to which parents will go to protect their children.', 
+    'In this riveting Thriller, Anne and Marco Conti attend a dinner party at their neighbor''s house, leaving their infant daughter at home. When they return, they discover that their baby is missing, setting off a frantic search for answers. As secrets and betrayals are exposed, Anne and Marco find themselves questioning everything they thought they knew about their neighbors, their marriage, and their own pasts. "The Couple Next Door" is a fast-paced and suspenseful novel that explores themes of trust, guilt, and the lengths to which parents will go to protect their children.', 
     'https://covers.openlibrary.org/b/id/8466573-L.jpg'),
 
     ('The Girl on the Bridge', 
     'Ken Reger', 
     'Thriller', 
-    'It is the summer of 1967. Kevin Edwards, recently returned from Vietnam, suffers from PTSD, but the treatments from the VA Hospital are doing more than helping him cope. He cannot remember things he knows he should, and his life begins to collapse. With his sanity in question, he falls into the deepest despair. He meets a girl, Cherokee Irons, falls in love, and slowly with her help begins to pick up the pieces of his shattered life. The two of them begin a strange odyssey, a quest for understanding that leads them into a labyrinth of deceit and peril. Each new insight puts their lives more at risk. The key to survival lies in his lost memory, and the two of them find themselves pitted against powerful forces, their very lives in the balance, as they come to understand what happened in Vietnam in the summer of 1965.', 
+    '''The Girl on the Bridge'' is a captivating thriller set in the summer of 1967. Kevin Edwards, a Vietnam veteran suffering from PTSD, finds his life falling apart as he struggles with memory loss and despair. When he meets Cherokee Irons, a girl who helps him piece his life back together, they embark on a perilous journey for understanding. However, their quest uncovers a web of deceit and danger, putting their lives at risk. As they delve into the mysteries of Vietnam in 1965, their very survival hangs in the balance. This gripping novel explores love, loss, and the pursuit of truth in a time of darkness and uncertainty.', 
     'https://covers.openlibrary.org/b/id/2958971-L.jpg'),
 
     ('Sharp Objects', 
@@ -91,7 +91,7 @@ VALUES
     ('The Adventures of Sherlock Holmes', 
     'Arthur Conan Doyle', 
     'Classic Detective', 
-    'Join the brilliant detective Sherlock Holmes and his loyal companion Dr. John Watson as they solve intriguing mysteries in Victorian England. From stolen jewels to baffling murders, Holmes''s keen intellect and deductive reasoning unravel some of the most puzzling cases, making this classic detective series a timeless favorite for mystery enthusiasts.',
+    '''The Adventures of Sherlock Holmes'' takes readers on thrilling journeys alongside the brilliant detective Sherlock Holmes and his loyal companion Dr. John Watson. From the streets of Victorian London to the foggy moors of the English countryside, Holmes unravels perplexing mysteries with his sharp intellect and keen powers of observation. This collection of captivating tales showcases Holmes'' mastery of deductive reasoning as he tackles a range of cases, from stolen jewels and baffling murders to complex conspiracies. With its engaging storytelling and fascinating characters, ''The Adventures of Sherlock Holmes'' continues to captivate readers, keeping them on the edge of their seats until the final revelation.',
     'https://covers.openlibrary.org/b/id/12519134-L.jpg'),
 
     ('Murder on the Orient Express', 
@@ -121,7 +121,7 @@ VALUES
     ('The Hound of the Baskervilles', 
     'Arthur Conan Doyle', 
     'Classic Detective', 
-    'In this eerie tale, Sherlock Holmes and Dr. Watson venture to Dartmoor to investigate the legend of a supernatural hound haunting the Baskerville family. Set against the backdrop of a misty moor, Holmes\''s detective skills are put to the test in this thrilling and atmospheric mystery.',
+    'In this eerie tale, Sherlock Holmes and Dr. Watson venture to Dartmoor to investigate the legend of a supernatural hound haunting the Baskerville family. Set against the backdrop of a misty moor, Holmes''s detective skills are put to the test in this thrilling and atmospheric mystery.',
     'https://covers.openlibrary.org/b/id/13771438-L.jpg'),
 
     ('The Adventures of Father Brown', 
@@ -133,7 +133,7 @@ VALUES
     ('Rebecca', 
     'Daphne du Maurier', 
     'Classic Detective', 
-    'In this haunting tale, a young woman marries the wealthy widower Maxim de Winter and moves to his imposing estate, Manderley. However, she soon finds herself haunted by the memory of Maxim\''s first wife, Rebecca. As she delves deeper into the mysteries surrounding Rebecca\''s death, dark secrets and hidden betrayals come to light.',
+    'In this haunting tale, a young woman marries the wealthy widower Maxim de Winter and moves to his imposing estate, Manderley. However, she soon finds herself haunted by the memory of Maxim''s first wife, Rebecca. As she delves deeper into the mysteries surrounding Rebecca''s death, dark secrets and hidden betrayals come to light.',
     'https://covers.openlibrary.org/b/id/6819347-L.jpg'),
 
     ('The Mystery of a Hansom Cab', 
@@ -144,7 +144,7 @@ VALUES
 
     ('The Moonstone', 
     'Wilkie Collins', 
-    'Classic Detective', 'When a valuable diamond, the Moonstone, is stolen from a young woman\''s birthday party, a captivating investigation ensues, filled with twists and turns. This classic detective novel is considered one of the earliest examples of the detective genre and keeps readers engrossed as the truth behind the theft is gradually revealed.',
+    'Classic Detective', 'When a valuable diamond, the Moonstone, is stolen from a young woman''s birthday party, a captivating investigation ensues, filled with twists and turns. This classic detective novel is considered one of the earliest examples of the detective genre and keeps readers engrossed as the truth behind the theft is gradually revealed.',
     'https://covers.openlibrary.org/b/id/6541420-L.jpg'),
 
     ('The Wedding Date', 
@@ -168,7 +168,7 @@ VALUES
     ('The Notebook', 
     'Nicholas Sparks', 
     'Romance', 
-    'Noah and Allie\''s love story unfolds across time as they navigate the challenges of social class and the realities of life. Their enduring love and heartbreaking journey captivate readers, reminding us of the power of love and the importance of holding onto cherished memories.',
+    'Noah and Allie''s love story unfolds across time as they navigate the challenges of social class and the realities of life. Their enduring love and heartbreaking journey captivate readers, reminding us of the power of love and the importance of holding onto cherished memories.',
     'https://covers.openlibrary.org/b/id/1469612-L.jpg'),
 
     ('Outlander', 
@@ -194,11 +194,11 @@ VALUES
     'Romance', 'Hazel Grace Lancaster and Augustus Waters meet at a cancer support group and embark on a poignant and unforgettable love story. As they navigate the challenges of illness and mortality, their relationship is marked by humor, vulnerability, and the realization that every moment is worth cherishing.',
     'https://covers.openlibrary.org/b/id/8345124-L.jpg'),
 
-    ('The Time Traveler\''s Wife', 
-    'Audrey Niffenegger', 
+    ('Same time next summer', 
+    'Holly Jacobs', 
     'Romance', 
-    'Henry DeTamble has a rare genetic condition that causes him to time travel involuntarily. Clare Abshire, his wife, learns to navigate their unconventional relationship, filled with unexpected meetings and separations. This unique love story explores themes of fate, love\''s endurance, and the complexities of time.',
-    'https://covers.openlibrary.org/b/id/9273734-L.jpg'),
+    'As children...During their families summer vacations, Carolyn Kendal and Stephan Foster were inseparable--running in the hot sand, chasing shadows and building a friendship that would last a lifetime.As teenagers...Their friendship turned serious. Carolyn and Stephan found themselves exploring the intensity of first love--even if it was only for the summer.And as adults...Carolyn''s daughter lies in a hospital bed fighting for her life. Suddenly Stephan is there beside her, offering support, strength--and enough love to last a lifetime of summers. Because when they''re together, shadows don''t stand a chance...do they?',
+    'https://covers.openlibrary.org/b/id/9746178-L.jpg'),
 
     ('One Day', 
     'David Nicholls', 
