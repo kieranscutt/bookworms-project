@@ -112,12 +112,10 @@ function openBook(e) {
   localStorage.setItem("title", title);
   window.location.assign("book.html");
 }
-///
-// let arrReturnedBooks = [];
 
 async function returnBook(e) {
   const title = e.target.parentElement.querySelector("img").alt;
-  e.target.parentElement.remove();
+  const bookElement = e.target.parentElement;
 
   const data = {
     user_id: null,
@@ -140,7 +138,31 @@ async function returnBook(e) {
     if (response.status == 200) {
       const responseData = await response.json();
       alert(`Book returned successfully!`);
-      // \nThe book must be returned on ${returnDate} // to implement later
+
+      const previousGrid = document.querySelector(".previousGrid");
+      const currentGrid = document.querySelector(".CurrentGrid");
+
+      currentGrid.removeChild(bookElement);
+
+      const imgWrapper = document.createElement("div");
+      imgWrapper.classList.add("img_wrapper");
+      previousGrid.appendChild(imgWrapper);
+      const bookImage = document.createElement("img");
+      bookImage.src = responseData.book_cover;
+      bookImage.alt = responseData.title;
+      bookImage.id = "borrowedBook";
+      bookImage.classList.add("reading");
+      imgWrapper.appendChild(bookImage);
+
+      bookImage.addEventListener("click", openBook);
+
+      console.log("Book moved to Previous Books:", responseData.title);
+
+      if (currentGrid.children.length === 0) {
+        const noBooks = document.createElement("h2");
+        noBooks.innerHTML = "No currently borrowed books";
+        currentGrid.appendChild(noBooks);
+      }
     } else {
       alert(`Book return failed.`);
     }
@@ -148,61 +170,3 @@ async function returnBook(e) {
     console.error("Error returning book:", error);
   }
 }
-///
-// async function returnBook(e) {
-//   const title = e.target.parentElement.querySelector("img").alt;
-//   const bookElement = e.target.parentElement;
-
-//   const data = {
-//     user_id: null,
-//     borrow_date: null,
-//     return_date: null,
-//   };
-//   const options = {
-//     method: "PATCH",
-//     headers: {
-//       Authorization: localStorage.getItem("token"),
-//       "Content-Type": "application/json",
-//     },
-//     body: JSON.stringify(data),
-//   };
-//   try {
-//     const response = await fetch(
-//       `http://localhost:3000/books/${title}`,
-//       options
-//     );
-//     if (response.status == 200) {
-//       const responseData = await response.json();
-//       alert(`Book returned successfully!`);
-
-//       const previousGrid = document.querySelector(".previousGrid");
-//       const currentGrid = document.querySelector(".CurrentGrid");
-
-//       currentGrid.removeChild(bookElement);
-
-//       const imgWrapper = document.createElement("div");
-//       imgWrapper.classList.add("img_wrapper");
-//       previousGrid.appendChild(imgWrapper);
-//       const bookImage = document.createElement("img");
-//       bookImage.src = responseData.book_cover;
-//       bookImage.alt = responseData.title;
-//       bookImage.id = "borrowedBook";
-//       bookImage.classList.add("reading");
-//       imgWrapper.appendChild(bookImage);
-
-//       bookImage.addEventListener("click", openBook);
-
-//       console.log("Book moved to Previous Books:", responseData.title);
-
-//       if (currentGrid.children.length === 0) {
-//         const empty = document.createElement("h2");
-//         empty.innerHTML = "No currently borrowed books.";
-//         currentGrid.appendChild(empty);
-//       }
-//     } else {
-//       alert(`Book return failed.`);
-//     }
-//   } catch (error) {
-//     console.error("Error returning book:", error);
-//   }
-// }
