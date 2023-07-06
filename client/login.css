@@ -16,9 +16,10 @@ body {
 }
 
 .title {
-    font-size: 72px;
-    text-align: center;
-    color: #230404;
+  
+  font-size: 72px;
+  text-align: center;
+  color: #230404;
 }
 
 .login-box {
@@ -99,13 +100,11 @@ body {
 }
 
 #login-btn:hover {
-    background-color: #03e9f4;
-    color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 5px #03e9f4,
-    0 0 25px #03e9f4,
-    0 0 50px #03e9f4,
-    0 0 100px #03e9f4,
+  background-color: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
 }
 
 /*.button--ujarak {
@@ -156,3 +155,49 @@ body {
 */
 
 
+
+.container {
+  overflow: hidden;
+  height: 100%;
+  width: 200px;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  
+  -webkit-text-fill-color: bisque;
+  -webkit-box-shadow: #230404;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/*
+.sliding-image {
+  margin-left: 30px;
+  margin: 100px 0 100px 30px;
+  animation: slide 5s ease infinite;
+}
+
+.sliding-background {
+  overflow: hidden;
+  height: 100%;
+  width: 100%
+  animation: slide linear  10s infinite;
+}
+
+@keyframes slide {
+  0% {
+  transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%)
+  }
+}
+
+*/
