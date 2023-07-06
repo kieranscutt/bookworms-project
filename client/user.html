@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User information</title>
-    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="user.css">
     <script
       src="https://kit.fontawesome.com/e0f29e24ce.js"
       crossorigin="anonymous"
@@ -13,10 +13,14 @@
 </head>
 <body>
     <nav class="navbar">
+        <div class="icons">
         <i id="hamburger" class="fa-solid fa-bars"></i>
         <i id="user-icon" class="fa-regular fa-user"></i>
+        </div>
+        <div class="icons">
         <h1 id="logo">Bookworms</h1>
         <i class="fa-solid fa-worm fa-2xl" style="color: '#FFFFFF;'"></i>
+        </div>
         <form id="search-form">
           <input type="text" id="searchbar" placeholder="Search Books" />
           <button type="submit" id="search-button">
@@ -50,14 +54,23 @@
                 </div>
             </div>
             <section class="CurrentBooks">
+                <hr class="prtitleLine">
                 <h1 class="trendingBooksTitle">Currently Reading</h1>
+                
                 <section class="CurrentGrid">
                 </section>
             <section class="PreviousBooks">
+                <hr class="prtitleLine">
                 <h1 class="trendingBooksTitle">Previous Books</h1>
                 <section class="previousGrid"></section>
 
                 </section>
       </section>
+      
+      <div id="popup-container" class="popup-container">
+        <div class="popup">
+          <p id="popup-message"></p>
+          <button id="popup-close">Close</button>
+        </div>
 </body>
 </html>

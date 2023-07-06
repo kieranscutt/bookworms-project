@@ -1,0 +1,350 @@
+/* USERS */
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Rubik", sans-serif;
+  height: 100%;
+  width: 100%;
+  background-color: #eee9da;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    padding: 30px;
+    height: 94px;
+    background-color: #230404;
+    color: #eee9da;
+  }
+  
+  .icons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #hamburger::before {
+    content: "\f0c9"; /* Default hamburger icon */
+    font-family: "Font Awesome 5 Free"; /* FontAwesome font family */
+    font-weight: 900; /* FontAwesome font weight */
+    transition: transform 0.3s ease; /* Transition for animation */
+    font-size: 40px;
+    font-style: normal;
+    cursor: pointer;
+  }
+  
+  #hamburger:hover {
+    transform: scale(105%);
+  }
+  
+  #hamburger.active::before {
+    content: "\f00d"; /* Icon when the hamburger is active/clicked */
+    font-size: 46.5px;
+    font-style: normal;
+  }
+  
+  #user-icon {
+    font-size: 45px;
+    cursor: pointer;
+    margin-left: 29px;
+  }
+  
+  #user-icon:hover {
+    transform: scale(105%);
+  }
+  
+  #logo {
+    font-size: 48px;
+    font-weight: 700;
+    cursor: pointer;
+    margin-left: 394px;
+  }
+
+  .fa-worm {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  #search-form {
+    width: 400px;
+    height: 60px;
+    display: flex;
+    background-color: #eee9da;
+    border-radius: 10px;
+    border: none;
+  }
+  #searchbar {
+    height: 100%;
+    background: #eee9da;
+    color: black;
+    font-family: "Rubik", sans-serif;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    padding: 0 10px;
+  }
+  
+  #search-button {
+    position: relative;
+    height: 100%;
+    width: 60px;
+    border: none;
+    margin-left: 40px;
+    background-color: #eee9da;
+    display: flex;
+    cursor: pointer;
+    font-size: 43px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+  }
+  #search-button i:hover {
+    transform: scale(105%);
+  }
+
+  #dropdown-button {
+    font-size: 40px;
+    margin-top: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+    height: 20px;
+  }
+  
+  #dropdown-button:hover {
+    transform: scale(105%);
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  li a {
+    text-decoration: none;
+    color: bisque;
+    font-size: 1rem;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+    transform: scale(105%);
+  }
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .profile__logo {
+    background-color: #230404;
+    margin-top: 12px;
+    padding: 12px;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.16);
+  }
+  
+  .profile__letter {
+    font-size: 64px;
+    color: white;
+  }
+  
+  .profile__name {
+    display: flex;
+  }
+  
+  .name {
+    margin: 8px;
+  }
+  
+  .name__input {
+    margin-top: 8px;
+  }
+  
+  .currentGrid,
+  .previousGrid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5, 156px);
+    gap: 109px;
+    justify-content: center;
+    margin: 0;
+  }
+  
+  .previous,
+  .reading {
+    margin-bottom: 12px;
+    transition: all 300ms ease;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.596);
+  }
+  
+  .previous:not(:hover),
+  .reading:not(:hover) {
+    filter: brightness(70%);
+    opacity: 0.86;
+    transform: scale(0.9);
+  }
+
+  .reading:hover {
+    cursor: pointer;
+  }
+  
+  .profile__email {
+    display: flex;
+    align-items: center;
+  }
+  
+  .email__input {
+    margin-left: 8px;
+  }
+  
+  .reading {
+    height: 230px;
+    width: 153px;
+  }
+  
+  .img_wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .burger-menu {
+    position: absolute;
+    top: 88px;
+    left: 0px;
+    height: 0;
+    width: 300px;
+    background-color: #230404;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    z-index: 5;
+    border-radius: 8px;
+  }
+  
+  .burger-menu.open {
+    height: 130px;
+    width: 300px;
+    border: solid #230404 2px;
+  }
+  
+  .burger-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .trendingBooksTitle {
+    font-size: 48px;
+    font-weight: 400;
+    margin-left: 105px;
+    margin-bottom: 49px;
+  }
+
+
+  .prtitleLine {
+    border-top: 2px solid #230404;
+    margin-top: 30px;
+  }
+  
+  #returnBtn {
+    width: 120px;
+    padding: 2px;
+    color: #ffffff;
+    border: 2px solid #dfd7bf;
+    font-size: 18px;
+    background-color: #230404;
+    border-radius: 5px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
+    transition: all 300ms ease;
+    transition: .5s;
+    margin-bottom: 10px;
+  }
+
+  #returnBtn:hover {
+    scale: 1.1;
+    cursor: pointer;
+    background-color: #03e9f4;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #03e9f4,
+    0 0 25px #03e9f4,
+    0 0 50px #03e9f4,
+    0 0 100px #03e9f4,
+  }
+
+  #popup-container {
+    display: flex;
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 9999;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 40%;
+    left: 40%;
+    height: 200px;
+    width: 100%;
+    max-width: 300px;
+    background-color: #dfd7bf;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: black;
+    margin: 10px;
+    padding: 20px;
+  }
+  
+  #popup-message {
+    margin-bottom: 0;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  #popup-close {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: #3f2305;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  
+  #popup-close:hover {
+    background-color: #4c4b16;
+  }
+  
+  h3 {
+    text-align: center;
+  }
