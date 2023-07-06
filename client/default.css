@@ -384,6 +384,10 @@ a:hover {
   display: none;
 }
 
+.hidden {
+  display: none;
+}
+
 /* USERS */
 
 .profile {

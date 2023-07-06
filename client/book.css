@@ -241,22 +241,40 @@ a:hover {
 }
 
 #popup-container {
+  display: flex;
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: none;
-  width: 400px;
-  background-color: #dfd7bf;
-  padding: 40px;
-  border-radius: 10px;
-  text-align: center;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 9999;
 }
 
+.popup {
+  position: fixed;
+  top: 40%;
+  left: 40%;
+  height: 200px;
+  width: 100%;
+  max-width: 300px;
+  background-color: #dfd7bf;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  color: black;
+  margin: 10px;
+  padding: 20px;
+}
+
 #popup-message {
-  margin-bottom: 30px;
+  margin-bottom: 0;
   font-size: 18px;
+  text-align: center;
 }
 
 #popup-close {
