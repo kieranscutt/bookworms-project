@@ -86,8 +86,16 @@ async function currentlyReading() {
       bookImage.id = "borrowedBook";
       bookImage.classList.add("reading");
 
+      //due date
+//when currently reading books loaded, for each book,
+// create element h3, innerHtml= book.return_date
+      const dueDate = document.createElement("h3");
+      dueDate.innerHTML = "Due: " + book.return_date
+      imgWrapper.appendChild(dueDate);
+
       bookImage.addEventListener("click", openBook);
       imgWrapper.appendChild(bookImage);
+      
 
       const returnBtn = document.createElement("input");
       returnBtn.value = "return";
@@ -137,12 +145,27 @@ async function returnBook(e) {
     );
     if (response.status == 200) {
       const responseData = await response.json();
-      alert(`Book returned successfully!`);
+      displayPopup(`Book returned successfully!`);
       // \nThe book must be returned on ${returnDate} // to implement later
     } else {
-      alert(`Book return failed.`);
+      displayPopup(`Book return failed.`);
     }
   } catch (error) {
     console.error("Error returning book:", error);
   }
 }
+
+function displayPopup(message) {
+  const popupContainer = document.getElementById("popup-container");
+  const popupMessage = document.getElementById("popup-message");
+  const popupClose = document.getElementById("popup-close");
+
+  popupMessage.textContent = message;
+  popupContainer.style.display = "block";
+
+  popupClose.addEventListener("click", () => {
+    popupContainer.style.display = "none";
+  });
+}
+
+
