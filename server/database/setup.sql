@@ -136,11 +136,11 @@ VALUES
     'In this haunting tale, a young woman marries the wealthy widower Maxim de Winter and moves to his imposing estate, Manderley. However, she soon finds herself haunted by the memory of Maxim\''s first wife, Rebecca. As she delves deeper into the mysteries surrounding Rebecca\''s death, dark secrets and hidden betrayals come to light.',
     'https://covers.openlibrary.org/b/id/6819347-L.jpg'),
 
-    ('The No. 1 Ladies\'' Detective Agency', 
-    'Alexander McCall Smith', 
+    ('The Mystery of a Hansom Cab', 
+    'Fergus Hume', 
     'Classic Detective', 
-    'Set in Botswana, this delightful series follows Precious Ramotswe as she fulfills her lifelong dream of opening a detective agency. With a sharp mind and a warm heart, Precious solves cases with a unique blend of wit and compassion, making her one of the most endearing detectives in fiction.',
-    'https://covers.openlibrary.org/b/id/6980462-L.jpg'),
+    'The Mystery of a Hansom Cab, published in 1886, was the first novel by Fergus Hume. It begins with a sensational murder, as the body of a dead man is discovered in a hansom cab by the driver. Set in Melbourne, Australia, it presents an engaging story of crime and detection, with several unexpected twists and turns. It also gives a clear and interesting portrait of the colonial city at the peak of its 19th Century prosperity following a gold rush, a time when it was known as “Marvellous Melbourne.” The novel contrasts the comfortable lives of the rich and well-connected of the colony with the misery of those living in the noisome slums in the back-streets of the city.',
+    'https://covers.openlibrary.org/b/id/12622067-L.jpg'),
 
     ('The Moonstone', 
     'Wilkie Collins', 
