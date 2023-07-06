@@ -18,6 +18,15 @@
     "nodemon": "^2.0.22",
     "supertest": "^6.3.3"
   },
+  "jest": {
+    "testEnvironment": "node",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/"
+    ],
+    "testPathIgnorePatterns": [
+      "node_modules"
+    ]
+  },
   "dependencies": {
     "bcrypt": "^5.1.0",
     "cors": "^2.8.5",
