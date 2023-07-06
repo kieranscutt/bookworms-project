@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Lato", sans-serif;
+  height: 100%;
+  width: 100%;
+  background-color: #eee9da;
+}
+
+.title {
+  font-size: 72px;
+  text-align: center;
+  color: #230404;
+  
+}
+
+.register-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 500px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background-color: #230404;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    margin-top: 30px;
+  }
+  
+  .register-box h1 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: bisque;
+    text-align: center;
+  }
+  
+  .register-box .user-box {
+    position: relative;
+  }
+  
+  .register-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: bisque;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid bisque;
+    outline: none;
+    background: transparent;
+  }
+  
+  .register-box .user-box label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: bisque;
+    pointer-events: none;
+    transition: 0.5s;
+  }
+
+  #register-btn {
+    position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  /* background-color: #6030b1; */
+  background-color: bisque;
+  color: #230404;
+  border-radius: 50px;
+  border: none;
+  transition: all 300ms ease;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: 0.5s;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  letter-spacing: 4px;
+}
+
+
+#register-btn:hover {
+  background-color: #03e9f4;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
+    0 0 100px #03e9f4;
+}
+
+#link-to-login {
+    margin-bottom: 10px;
+    position: absolute;
+    bottom: 10px;
+}
