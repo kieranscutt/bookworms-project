@@ -266,23 +266,26 @@ nav {
     margin-top: 30px;
   }
   
-  #returnBtn {
-    width: 120px;
-    padding: 2px;
-    color: #ffffff;
-    border: 2px solid #dfd7bf;
-    font-size: 18px;
-    background-color: #230404;
-    border-radius: 5px;
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.7);
-    transition: all 300ms ease;
-    transition: .5s;
-    margin-bottom: 10px;
-  }
 
-  #returnBtn:hover {
-    scale: 1.1;
-    cursor: pointer;
+#returnBtn {
+    position: relative;
+    display: inline-block;
+    padding: 7px 14px;
+    background-color: #230404;
+    color: white;
+    border-radius: 50px;
+    transition: all 300ms ease;
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+#returnBtn:hover {
     background-color: #03e9f4;
     color: #fff;
     border-radius: 5px;
@@ -290,7 +293,7 @@ nav {
     0 0 25px #03e9f4,
     0 0 50px #03e9f4,
     0 0 100px #03e9f4,
-  }
+}
 
   #popup-container {
     display: flex;
