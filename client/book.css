@@ -23,6 +23,8 @@ body {
   width: 90vw;
   height: 700px;
   align-items: center;
+  margin-bottom: 10px;
+  justify-content: right;
 }
 
 h1 {
@@ -69,9 +71,9 @@ h3 {
   position: absolute;
   width: 600px;
   top: 680px;
-  right: 75px;
+  right: 76px;
   display: flex;
-  justify-content: center;
+  justify-content: right;
 }
 
 @keyframes buttonAnimation {
@@ -90,7 +92,10 @@ h3 {
 }
 
 #borrow-btn {
-  width: 50vw;
+  position: relative;
+  max-width: fit-content;
+  padding-left: 8px;
+  padding-right: 8px;
   height: 63px;
   background-color: #230404;
   border: none;
