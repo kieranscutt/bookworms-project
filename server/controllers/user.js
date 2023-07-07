@@ -34,29 +34,6 @@ async function login(req, res) {
   }
 }
 
-async function destroy(req, res) {
-  try {
-    const email = req.params.email;
-    const user = await User.getOneByEmail(email);
-    const result = await user.destroy();
-    res.status(204).end();
-  } catch (err) {
-    res.status(404).send({ error: err.message });
-  }
-}
-
-async function update(req, res) {
-  try {
-    const email = req.params.email;
-    const data = req.body;
-    const user = await User.getOneByEmail(email);
-    const result = await user.update(data);
-    res.status(200).json(result);
-  } catch (err) {
-    res.status(404).send({ error: err.message });
-  }
-}
-
 async function show(req, res) {
   try {
     const id = parseInt(req.params.id);
@@ -67,4 +44,4 @@ async function show(req, res) {
   }
 }
 
-module.exports = { register, login, destroy, update, show };
+module.exports = { register, login, show };
