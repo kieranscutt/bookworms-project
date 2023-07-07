@@ -13,9 +13,14 @@
   </head>
   <body>
     <nav class="navbar">
-      <i id="hamburger" class="fa-solid fa-bars"></i>
-      <i id="user-icon" class="fa-regular fa-user"></i>
+      <div class="icons">
+        <i id="hamburger"></i>
+        <i id="user-icon" class="fa-regular fa-user"></i>
+      </div>
+      <div class="icons">
       <h1 id="logo">Bookworms</h1>
+      <i class="fa-solid fa-worm fa-2xl" style="color: '#FFFFFF;'"></i>
+    </div>
       <form id="search-form">
         <input type="text" id="searchbar" placeholder="Search Books" />
         <button type="submit" id="search-button">
@@ -23,38 +28,55 @@
         </button>
       </form>
     </nav>
+    <section class="burger-menu" id="burger-menu">
+      <li><a href="./index.html">Home</a></li>
+      <hr />
+      <li><a href="./user.html">Profile</a></li>
+      <hr />
+      <li>
+        <a href="./login.html" onclick="() => {localStorage.clear()}"
+          >Log Out</a
+        >
+      </li>
+    </section>
     <section class="trendingBooks">
       <h1 class="trendingBooksTitle">Trending Books</h1>
       <section class="trendingGrid">
-        <img src="images/harrypotter.png" alt="harrypotter" id="trending1" />
-        <img src="images/lunarstorm.png" alt="lunarstorm" id="trending2" />
-        <img
-          src="images/thehypocriteworld.png"
-          alt="thehypocriteworld"
-          id="trending3"
-        />
-        <img src="images/normalpeople.png" alt="normalpeople" id="trending4" />
-        <img
-          src="images/thegreatgatsby.png"
-          alt="thegreatgatsby"
-          id="trending5"
-        />
+        <img src="" alt="" class="trendingBook" id="trendingBook" />
+        <img src="" alt="" class="trendingBook" id="trendingBook" />
+        <img src="" alt="" class="trendingBook" id="trendingBook" />
+        <img src="" alt="" class="trendingBook" id="trendingBook" />
+        <img src="" alt="" class="trendingBook" id="trendingBook" />
       </section>
     </section>
     <section class="browseGenres">
       <h1 class="browseGenresTitle">Browse Genres</h1>
       <i id="dropdown-button" class="fa-solid fa-caret-down"></i>
-      <div class="genreMenu open" id="genre-menu">
-        <li><a id="thriller" href="#">Thriller</a></li>
+      <section class="genreMenu" id="genre-menu">
+        <li><a id="genreLink" href="#">Thriller</a></li>
         <hr />
-        <li><a id="detective" href="#">Classic Detective</a></li>
+        <li>
+          <a id="genreLink" href="#">Classic Detective</a>
+        </li>
         <hr />
-        <li><a id="romance" href="#">Romance</a></li>
+        <li><a id="genreLink" href="#">Romance</a></li>
         <hr />
-        <li><a id="kids" href="#">Kids</a></li>
+        <li><a id="genreLink" href="#">Kids</a></li>
         <hr />
-        <li><a id="action" href="#">Action/Adventure</a></li>
-      </div>
+        <li><a id="genreLink" href="#">Action/Adventure</a></li>
+      </section>
+    </section>
+    <section class="genreGrid hidden">
+      <img src="" alt="" id="genreBook" class="trendingBook" />
+      <img src="" alt="" id="genreBook" class="trendingBook" />
+      <img src="" alt="" id="genreBook" class="trendingBook" />
+      <img src="" alt="" id="genreBook" class="trendingBook" />
+      <img src="" alt="" id="genreBook" class="trendingBook" />
+      <img src="" alt="" id="genreBook" class="trendingBook" />
+      <img src="" alt="" id="genreBook" class="trendingBook" />
+      <img src="" alt="" id="genreBook" class="trendingBook" />
+      <img src="" alt="" id="genreBook" class="trendingBook" />
+      <img src="" alt="" id="genreBook" class="trendingBook" />
     </section>
   </body>
 </html>

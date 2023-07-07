@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User information</title>
+    <link rel="stylesheet" href="user.css">
+    <script
+      src="https://kit.fontawesome.com/e0f29e24ce.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="assets/user.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="icons">
+        <i id="hamburger" class="fa-solid fa-bars"></i>
+        <i id="user-icon" class="fa-regular fa-user"></i>
+        </div>
+        <div class="icons">
+        <h1 id="logo">Bookworms</h1>
+        <i class="fa-solid fa-worm fa-2xl" style="color: '#FFFFFF;'"></i>
+        </div>
+        <form id="search-form">
+          <input type="text" id="searchbar" placeholder="Search Books" />
+          <button type="submit" id="search-button">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </form>
+      </nav>
+      <section class="burger-menu" id="burger-menu">
+        <li><a href="./index.html">Home</a></li>
+        <hr />
+        <li><a href="./user.html">Profile</a></li>
+        <hr />
+        <li>
+          <a href="./login.html" onclick="() => {localStorage.clear()}"
+            >Log Out</a
+          >
+        </li>
+      </section>
+      <section class="container">
+          <div class="profile">
+              <div class="profile__logo">
+                  <h1 class="profile__letter"></h1>
+                </div>
+                <div class="profile__name">
+                    <h2 class="name">Name:</h2>
+                    <h2 class="name__input"></h2>
+                </div>
+                <div class="profile__email">
+                    <h2 class="email">Email:</h2>
+                    <p class="email__input"></p>
+                </div>
+            </div>
+            <section class="CurrentBooks">
+                <hr class="prtitleLine">
+                <h1 class="trendingBooksTitle">Currently Reading</h1>
+                
+                <section class="CurrentGrid">
+                </section>
+            <section class="PreviousBooks">
+                <hr class="prtitleLine">
+                <h1 class="trendingBooksTitle">Previous Books</h1>
+                <section class="previousGrid">
+                </section>
+      </section>
+      
+      <div id="popup-container" class="popup-container">
+        <div class="popup">
+          <p id="popup-message"></p>
+          <button id="popup-close">Close</button>
+        </div>
+      </div>
+</body>
+</html>

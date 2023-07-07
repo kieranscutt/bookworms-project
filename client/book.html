@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book information</title>
+    <link rel="stylesheet" href="book.css" />
+    <script
+      src="https://kit.fontawesome.com/e0f29e24ce.js"
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="assets/book.js"></script>
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="icons">
+        <i id="hamburger"></i>
+        <i id="user-icon" class="fa-regular fa-user"></i>
+      </div>
+      <div class="icons">
+      <h1 id="logo">Bookworms</h1>
+      <i class="fa-solid fa-worm fa-2xl" style="color: '#FFFFFF;'"></i>
+    </div>
+      <form id="search-form">
+        <input type="text" id="searchbar" placeholder="Search Books" />
+        <button type="submit" id="search-button">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+    </nav>
+    <section class="burger-menu" id="burger-menu">
+      <li><a href="./index.html">Home</a></li>
+      <hr />
+      <li><a href="./user.html">Profile</a></li>
+      <hr />
+      <li>
+        <a href="./login.html" onclick="() => {localStorage.clear()}"
+          >Log Out</a
+        >
+      </li>
+    </section>
+    <section class="container">
+      <img id="book-cover" alt="book cover" />
+
+      <section class="book-info">
+        <h1 id="title"></h1>
+        <hr />
+        <h2 id="author"></h2>
+        <h2 id="genre"></h2>
+        <hr />
+        <h3 id="description"></h3>
+      </section>
+    </section>
+    <div class="borrow-container">
+      <input type="submit" value="Borrow" id="borrow-btn" />
+    </div>
+    <div id="popup-container" class="popup-container">
+      <div class="popup">
+        <p id="popup-message"></p>
+        <button id="popup-close">Close</button>
+      </div>
+    </div>
+  </body>
+</html>

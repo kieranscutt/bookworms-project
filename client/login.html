@@ -3,19 +3,45 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="default.css" />
+    <link rel="stylesheet" href="login.css" />
+    <script
+      src="https://kit.fontawesome.com/e0f29e24ce.js"
+      crossorigin="anonymous"
+    ></script>
     <script defer src="assets/login.js"></script>
     <title>Login</title>
   </head>
   <body>
-    <form id="login-form">
+    <div class="logo">
+      <h1 class="title" id="logo">Bookworms</h1>
+      <i class="fa-solid fa-worm"></i>
+    </div>
+    <div class="login-box">
       <h1 class="loginTitle">Login Form</h1>
-      <input type="text" id="login-input" placeholder="Email Address" />
-      <input type="text" id="login-input" placeholder="Password" />
-      <input type="submit" value="Login" id="login-btn" />
+      <form id="login-form">
+        <div class="user-box">
+          <input
+            type="text"
+            class="login-input"
+            name="email"
+            id="login-input-email"
+            placeholder="Email Address"
+          />
+        </div>
+        <div class="user-box">
+          <input
+            type="password"
+            class="login-input"
+            name="password"
+            id="login-input-password"
+            placeholder="Password"
+          />
+        </div>
+        <input type="submit" value="Login" id="login-btn" />
+      </form>
       <a href="register.html" id="link-to-register"
         ><u>Don't have an account? Register.</u></a
       >
-    </form>
+    </div>
   </body>
 </html>
