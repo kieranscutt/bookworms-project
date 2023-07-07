@@ -28,8 +28,6 @@ function openBurger() {
   burgerMenu.classList.toggle("open");
 }
 
-//token = {token_id: 7, user_id: 3, token: '07cff7b3-0f0a-4382-b035-58e244061e1d'}
-
 async function formSubmission(event) {
   event.preventDefault();
 
@@ -86,9 +84,6 @@ async function currentlyReading() {
       bookImage.id = "borrowedBook";
       bookImage.classList.add("reading");
 
-      //due date
-      //when currently reading books loaded, for each book,
-      // create element h3, innerHtml= book.return_date
       const dueDate = document.createElement("h3");
       dueDate.innerHTML = "Due: " + book.return_date;
       imgWrapper.appendChild(dueDate);
@@ -105,9 +100,6 @@ async function currentlyReading() {
     });
   } else {
     window.location.assign("login.html");
-    const noBooks = document.createElement("h2");
-    noBooks.innerHTML = "No currently borrowed books";
-    currentGrid.appendChild(noBooks);
   }
 }
 
@@ -164,12 +156,6 @@ async function returnBook(e) {
       bookImage.addEventListener("click", openBook);
 
       console.log("Book moved to Previous Books:", responseData.title);
-
-      if (currentGrid.children.length === 0) {
-        const noBooks = document.createElement("h2");
-        noBooks.innerHTML = "No currently borrowed books";
-        currentGrid.appendChild(noBooks);
-      }
     } else {
       displayPopup(`Book return failed.`);
     }
